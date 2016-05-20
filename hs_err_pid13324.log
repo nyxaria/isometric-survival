@@ -1,0 +1,1498 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (os_linux_zero.cpp:285), pid=13324, tid=1362621552
+#  fatal error: caught unhandled signal 11
+#
+# JRE version: 6.0_34-b34
+# Java VM: OpenJDK Zero VM (23.25-b01 mixed mode linux-arm )
+# Derivative: IcedTea6 1.13.6
+# Distribution: Debian GNU/Linux 7.8 (wheezy), package 6b34-1.13.6-1~deb7u1+rpi1
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x016da070):  JavaThread "AWT-EventQueue-1" [_thread_in_Java, id=13342, stack(0x51200000,0x51380000)]
+
+Stack: [0x51200000,0x51380000],  sp=0x512c0ee4,  free space=771k
+Java frames:
+ 0x5137dd40: stack_word[2]         = 0x5137dd94
+ 0x5137dd44: stack_word[1]         = 0x53161640
+ 0x5137dd48: stack_word[0]         = 0x5c876130
+ 0x5137dd4c: istate->_thread       = 0x016da070
+ 0x5137dd50: istate->_bcp          = 0x701d59e3 (bci 11)
+ 0x5137dd54: istate->_locals       = 0x5137dda4
+ 0x5137dd58: istate->_constants    = 0x701d8490
+ 0x5137dd5c: istate->_method       = javax.swing.LayoutFocusTraversalPolicy.accept(Ljava/awt/Component;)Z
+ 0x5137dd60: istate->_mdx          = 0x6fe18fd8
+ 0x5137dd64: istate->_stack        = 0x5137dd44
+ 0x5137dd68: istate->_msg          = 0x00000000
+ 0x5137dd6c: istate->_result       = 0x5137dd48
+ 0x5137dd70: (istate->_result)     = 0x00000000
+ 0x5137dd74: (istate->_result)     = 0x5137dd34
+ 0x5137dd78: istate->_prev_link    = 0x00000002
+ 0x5137dd7c: istate->_oop_temp     = 0x00000000
+ 0x5137dd80: istate->_stack_base   = 0x5137dd4c
+ 0x5137dd84: istate->_stack_limit  = 0x5137dd3c
+ 0x5137dd88: istate->_monitor_base = 0x5137dd4c
+ 0x5137dd8c: istate->_self_link    = 0x5137dd4c
+ 0x5137dd90: frame_type            = INTERPRETER_FRAME
+ 0x5137dd94: next_frame            = 0x5137ddf0
+
+ 0x5137dd98: local[3]              = 0x00000000
+ 0x5137dd9c: local[2]              = 0x00000000
+ 0x5137dda0: local[1]              = 0x5c876130
+ 0x5137dda4: local[0]              = 0x5c876110
+ 0x5137dda8: istate->_thread       = 0x016da070
+ 0x5137ddac: istate->_bcp          = 0x701d727a (bci 130)
+ 0x5137ddb0: istate->_locals       = 0x5137de08
+ 0x5137ddb4: istate->_constants    = 0x701d8090
+ 0x5137ddb8: istate->_method       = javax.swing.SortingFocusTraversalPolicy.getFirstComponent(Ljava/awt/Container;)Ljava/awt/Component;
+ 0x5137ddbc: istate->_mdx          = 0x701d9162
+ 0x5137ddc0: istate->_stack        = 0x5137dd9c
+ 0x5137ddc4: istate->_msg          = 0x00000000
+ 0x5137ddc8: istate->_result       = 0x701d9190
+ 0x5137ddcc: (istate->_result)     = 0x5137dd8c
+ 0x5137ddd0: (istate->_result)     = 0x5137ddac
+ 0x5137ddd4: istate->_prev_link    = 0x00000000
+ 0x5137ddd8: istate->_oop_temp     = 0x00000000
+ 0x5137dddc: istate->_stack_base   = 0x5137dda8
+ 0x5137dde0: istate->_stack_limit  = 0x5137dd94
+ 0x5137dde4: istate->_monitor_base = 0x5137dda8
+ 0x5137dde8: istate->_self_link    = 0x5137dda8
+ 0x5137ddec: frame_type            = INTERPRETER_FRAME
+ 0x5137ddf0: next_frame            = 0x5137de54
+
+ 0x5137ddf4: local[5]              = 0x5c876130
+ 0x5137ddf8: local[4]              = 0x00000000
+ 0x5137ddfc: local[3]              = 0x00000005
+ 0x5137de00: local[2]              = 0x53160090
+ 0x5137de04: local[1]              = 0x5c876130
+ 0x5137de08: local[0]              = 0x5c876110
+ 0x5137de0c: istate->_thread       = 0x016da070
+ 0x5137de10: istate->_bcp          = 0x701d583f (bci 39)
+ 0x5137de14: istate->_locals       = 0x5137de60
+ 0x5137de18: istate->_constants    = 0x701d8490
+ 0x5137de1c: istate->_method       = javax.swing.LayoutFocusTraversalPolicy.getFirstComponent(Ljava/awt/Container;)Ljava/awt/Component;
+ 0x5137de20: istate->_mdx          = 0x5137ddd4
+ 0x5137de24: istate->_stack        = 0x5137de00
+ 0x5137de28: istate->_msg          = 0x00000000
+ 0x5137de2c: istate->_result       = 0x5137ddf8
+ 0x5137de30: (istate->_result)     = 0x5137dde8
+ 0x5137de34: (istate->_result)     = 0x5137ddf8
+ 0x5137de38: istate->_prev_link    = 0x5137ddf8
+ 0x5137de3c: istate->_oop_temp     = 0x00000000
+ 0x5137de40: istate->_stack_base   = 0x5137de0c
+ 0x5137de44: istate->_stack_limit  = 0x5137ddfc
+ 0x5137de48: istate->_monitor_base = 0x5137de0c
+ 0x5137de4c: istate->_self_link    = 0x5137de0c
+ 0x5137de50: frame_type            = INTERPRETER_FRAME
+ 0x5137de54: next_frame            = 0x5137deac
+
+ 0x5137de58: local[2]              = 0x5c7ce8f8
+ 0x5137de5c: local[1]              = 0x5c876130
+ 0x5137de60: local[0]              = 0x5c876110
+ 0x5137de64: istate->_thread       = 0x016da070
+ 0x5137de68: istate->_bcp          = 0x701d75a2 (bci 2)
+ 0x5137de6c: istate->_locals       = 0x5137deb4
+ 0x5137de70: istate->_constants    = 0x701d8090
+ 0x5137de74: istate->_method       = javax.swing.SortingFocusTraversalPolicy.getDefaultComponent(Ljava/awt/Container;)Ljava/awt/Component;
+ 0x5137de78: istate->_mdx          = 0x6fedf6c8
+ 0x5137de7c: istate->_stack        = 0x5137de58
+ 0x5137de80: istate->_msg          = 0x00000000
+ 0x5137de84: istate->_result       = 0x00000000
+ 0x5137de88: (istate->_result)     = 0x5137de4c
+ 0x5137de8c: (istate->_result)     = 0x5137de4c
+ 0x5137de90: istate->_prev_link    = 0x00000002
+ 0x5137de94: istate->_oop_temp     = 0x00000000
+ 0x5137de98: istate->_stack_base   = 0x5137de64
+ 0x5137de9c: istate->_stack_limit  = 0x5137de58
+ 0x5137dea0: istate->_monitor_base = 0x5137de64
+ 0x5137dea4: istate->_self_link    = 0x5137de64
+ 0x5137dea8: frame_type            = INTERPRETER_FRAME
+ 0x5137deac: next_frame            = 0x5137df00
+
+ 0x5137deb0: local[1]              = 0x5c876130
+ 0x5137deb4: local[0]              = 0x5c876110
+ 0x5137deb8: istate->_thread       = 0x016da070
+ 0x5137debc: istate->_bcp          = 0x7010db68 (bci 16)
+ 0x5137dec0: istate->_locals       = 0x5137df0c
+ 0x5137dec4: istate->_constants    = 0x7010e040
+ 0x5137dec8: istate->_method       = java.awt.FocusTraversalPolicy.getInitialComponent(Ljava/awt/Window;)Ljava/awt/Component;
+ 0x5137decc: istate->_mdx          = 0x6fedf858
+ 0x5137ded0: istate->_stack        = 0x5137deac
+ 0x5137ded4: istate->_msg          = 0x00000000
+ 0x5137ded8: istate->_result       = 0x00000000
+ 0x5137dedc: (istate->_result)     = 0x00000000
+ 0x5137dee0: (istate->_result)     = 0x5137de8c
+ 0x5137dee4: istate->_prev_link    = 0x00000000
+ 0x5137dee8: istate->_oop_temp     = 0x00000000
+ 0x5137deec: istate->_stack_base   = 0x5137deb8
+ 0x5137def0: istate->_stack_limit  = 0x5137dea8
+ 0x5137def4: istate->_monitor_base = 0x5137deb8
+ 0x5137def8: istate->_self_link    = 0x5137deb8
+ 0x5137defc: frame_type            = INTERPRETER_FRAME
+ 0x5137df00: next_frame            = 0x5137df58
+
+ 0x5137df04: local[2]              = 0x00000000
+ 0x5137df08: local[1]              = 0x5c876130
+ 0x5137df0c: local[0]              = 0x5c876110
+ 0x5137df10: istate->_thread       = 0x016da070
+ 0x5137df14: istate->_bcp          = 0x701083a2 (bci 346)
+ 0x5137df18: istate->_locals       = 0x5137df84
+ 0x5137df1c: istate->_constants    = 0x7010a970
+ 0x5137df20: istate->_method       = java.awt.DefaultKeyboardFocusManager.dispatchEvent(Ljava/awt/AWTEvent;)Z
+ 0x5137df24: istate->_mdx          = 0x5137dee8
+ 0x5137df28: istate->_stack        = 0x5137df04
+ 0x5137df2c: istate->_msg          = 0x00000000
+ 0x5137df30: istate->_result       = 0x5137df84
+ 0x5137df34: (istate->_result)     = 0x5c802f28
+ 0x5137df38: (istate->_result)     = 0x5c802f28
+ 0x5137df3c: istate->_prev_link    = 0x016da070
+ 0x5137df40: istate->_oop_temp     = 0x00000000
+ 0x5137df44: istate->_stack_base   = 0x5137df10
+ 0x5137df48: istate->_stack_limit  = 0x5137deec
+ 0x5137df4c: istate->_monitor_base = 0x5137df10
+ 0x5137df50: istate->_self_link    = 0x5137df10
+ 0x5137df54: frame_type            = INTERPRETER_FRAME
+ 0x5137df58: next_frame            = 0x5137dfd0
+
+ 0x5137df5c: local[10]             = 0x00000000
+ 0x5137df60: local[9]              = 0x00000000
+ 0x5137df64: local[8]              = 0x00000000
+ 0x5137df68: local[7]              = 0x00000000
+ 0x5137df6c: local[6]              = 0x00000000
+ 0x5137df70: local[5]              = 0x5c876130
+ 0x5137df74: local[4]              = 0x5c876130
+ 0x5137df78: local[3]              = 0x00000000
+ 0x5137df7c: local[2]              = 0x5c82f5d0
+ 0x5137df80: local[1]              = 0x5c82f5d0
+ 0x5137df84: local[0]              = 0x5c802f28
+ 0x5137df88: istate->_thread       = 0x016da070
+ 0x5137df8c: istate->_bcp          = 0x6feae10a (bci 146)
+ 0x5137df90: istate->_locals       = 0x5137dff0
+ 0x5137df94: istate->_constants    = 0x6ff48018
+ 0x5137df98: istate->_method       = java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+ 0x5137df9c: istate->_mdx          = 0x6ff637f7
+ 0x5137dfa0: istate->_stack        = 0x5137df7c
+ 0x5137dfa4: istate->_msg          = 0x00000000
+ 0x5137dfa8: istate->_result       = 0x6ff63858
+ 0x5137dfac: (istate->_result)     = 0x702a1cc8
+ 0x5137dfb0: (istate->_result)     = 0x5137df90
+ 0x5137dfb4: istate->_prev_link    = 0x00000000
+ 0x5137dfb8: istate->_oop_temp     = 0x00000000
+ 0x5137dfbc: istate->_stack_base   = 0x5137df88
+ 0x5137dfc0: istate->_stack_limit  = 0x5137df74
+ 0x5137dfc4: istate->_monitor_base = 0x5137df88
+ 0x5137dfc8: istate->_self_link    = 0x5137df88
+ 0x5137dfcc: frame_type            = INTERPRETER_FRAME
+ 0x5137dfd0: next_frame            = 0x5137e03c
+
+ 0x5137dfd4: local[7]              = 0x00000000
+ 0x5137dfd8: local[6]              = 0x00000000
+ 0x5137dfdc: local[5]              = 0x00000000
+ 0x5137dfe0: local[4]              = 0x00000000
+ 0x5137dfe4: local[3]              = 0x5c8762e0
+ 0x5137dfe8: local[2]              = 0x000000cf
+ 0x5137dfec: local[1]              = 0x5c82f5d0
+ 0x5137dff0: local[0]              = 0x5c876130
+ 0x5137dff4: istate->_thread       = 0x016da070
+ 0x5137dff8: istate->_bcp          = 0x6fecff82 (bci 42)
+ 0x5137dffc: istate->_locals       = 0x5137e04c
+ 0x5137e000: istate->_constants    = 0x6ff4aa28
+ 0x5137e004: istate->_method       = java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+ 0x5137e008: istate->_mdx          = 0x00000000
+ 0x5137e00c: istate->_stack        = 0x5137dfe8
+ 0x5137e010: istate->_msg          = 0x00000000
+ 0x5137e014: istate->_result       = 0x5137dfc4
+ 0x5137e018: (istate->_result)     = 0x5137dfdc
+ 0x5137e01c: (istate->_result)     = 0x00000000
+ 0x5137e020: istate->_prev_link    = 0x5137dfec
+ 0x5137e024: istate->_oop_temp     = 0x00000000
+ 0x5137e028: istate->_stack_base   = 0x5137dff4
+ 0x5137e02c: istate->_stack_limit  = 0x5137dfd8
+ 0x5137e030: istate->_monitor_base = 0x5137dff4
+ 0x5137e034: istate->_self_link    = 0x5137dff4
+ 0x5137e038: frame_type            = INTERPRETER_FRAME
+ 0x5137e03c: next_frame            = 0x5137e098
+
+ 0x5137e040: local[3]              = 0x00000000
+ 0x5137e044: local[2]              = 0x00000000
+ 0x5137e048: local[1]              = 0x5c82f5d0
+ 0x5137e04c: local[0]              = 0x5c876130
+ 0x5137e050: istate->_thread       = 0x016da070
+ 0x5137e054: istate->_bcp          = 0x6fedfc73 (bci 19)
+ 0x5137e058: istate->_locals       = 0x5137e0a0
+ 0x5137e05c: istate->_constants    = 0x6ff4c2b8
+ 0x5137e060: istate->_method       = java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V
+ 0x5137e064: istate->_mdx          = 0x6fd6a438
+ 0x5137e068: istate->_stack        = 0x5137e044
+ 0x5137e06c: istate->_msg          = 0x00000000
+ 0x5137e070: istate->_result       = 0x5137e03c
+ 0x5137e074: (istate->_result)     = 0x5137e024
+ 0x5137e078: (istate->_result)     = 0x5137e03c
+ 0x5137e07c: istate->_prev_link    = 0x5137e03c
+ 0x5137e080: istate->_oop_temp     = 0x00000000
+ 0x5137e084: istate->_stack_base   = 0x5137e050
+ 0x5137e088: istate->_stack_limit  = 0x5137e044
+ 0x5137e08c: istate->_monitor_base = 0x5137e050
+ 0x5137e090: istate->_self_link    = 0x5137e050
+ 0x5137e094: frame_type            = INTERPRETER_FRAME
+ 0x5137e098: next_frame            = 0x5137e0ec
+
+ 0x5137e09c: local[1]              = 0x5c82f5d0
+ 0x5137e0a0: local[0]              = 0x5c876130
+ 0x5137e0a4: istate->_thread       = 0x016da070
+ 0x5137e0a8: istate->_bcp          = 0x6feadfd2 (bci 2)
+ 0x5137e0ac: istate->_locals       = 0x5137e0f4
+ 0x5137e0b0: istate->_constants    = 0x6ff48018
+ 0x5137e0b4: istate->_method       = java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V
+ 0x5137e0b8: istate->_mdx          = 0x52dd3ab0
+ 0x5137e0bc: istate->_stack        = 0x5137e098
+ 0x5137e0c0: istate->_msg          = 0x00000000
+ 0x5137e0c4: istate->_result       = 0x5137e108
+ 0x5137e0c8: (istate->_result)     = 0x70092e68
+ 0x5137e0cc: (istate->_result)     = 0x70078d10
+ 0x5137e0d0: istate->_prev_link    = 0x5137e080
+ 0x5137e0d4: istate->_oop_temp     = 0x00000000
+ 0x5137e0d8: istate->_stack_base   = 0x5137e0a4
+ 0x5137e0dc: istate->_stack_limit  = 0x5137e098
+ 0x5137e0e0: istate->_monitor_base = 0x5137e0a4
+ 0x5137e0e4: istate->_self_link    = 0x5137e0a4
+ 0x5137e0e8: frame_type            = INTERPRETER_FRAME
+ 0x5137e0ec: next_frame            = 0x5137e140
+
+ 0x5137e0f0: local[1]              = 0x5c82f5d0
+ 0x5137e0f4: local[0]              = 0x5c876130
+ 0x5137e0f8: istate->_thread       = 0x016da070
+ 0x5137e0fc: istate->_bcp          = 0x700054b9 (bci 41)
+ 0x5137e100: istate->_locals       = 0x5137e14c
+ 0x5137e104: istate->_constants    = 0x70006fc8
+ 0x5137e108: istate->_method       = java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V
+ 0x5137e10c: istate->_mdx          = 0x5137e158
+ 0x5137e110: istate->_stack        = 0x5137e0ec
+ 0x5137e114: istate->_msg          = 0x00000000
+ 0x5137e118: istate->_result       = 0x70092e68
+ 0x5137e11c: (istate->_result)     = 0x70081958
+ 0x5137e120: (istate->_result)     = 0x00000000
+ 0x5137e124: istate->_prev_link    = 0x5137e104
+ 0x5137e128: istate->_oop_temp     = 0x00000000
+ 0x5137e12c: istate->_stack_base   = 0x5137e0f8
+ 0x5137e130: istate->_stack_limit  = 0x5137e0e8
+ 0x5137e134: istate->_monitor_base = 0x5137e0f8
+ 0x5137e138: istate->_self_link    = 0x5137e0f8
+ 0x5137e13c: frame_type            = INTERPRETER_FRAME
+ 0x5137e140: next_frame            = 0x5137e198
+
+ 0x5137e144: local[2]              = 0x5c876130
+ 0x5137e148: local[1]              = 0x5c82f5d0
+ 0x5137e14c: local[0]              = 0x5c876318
+ 0x5137e150: istate->_thread       = 0x016da070
+ 0x5137e154: istate->_bcp          = 0x70006a53 (bci 3)
+ 0x5137e158: istate->_locals       = 0x5137e1a4
+ 0x5137e15c: istate->_constants    = 0x70006fc8
+ 0x5137e160: istate->_method       = java.awt.EventQueue.access$400(Ljava/awt/EventQueue;Ljava/awt/AWTEvent;Ljava/lang/Object;)V
+ 0x5137e164: istate->_mdx          = 0x00000009
+ 0x5137e168: istate->_stack        = 0x5137e140
+ 0x5137e16c: istate->_msg          = 0x00000000
+ 0x5137e170: istate->_result       = 0x6ff52c0e
+ 0x5137e174: (istate->_result)     = 0x5137e1d0
+ 0x5137e178: (istate->_result)     = 0x70000760
+ 0x5137e17c: istate->_prev_link    = 0x6ff52cc0
+ 0x5137e180: istate->_oop_temp     = 0x00000000
+ 0x5137e184: istate->_stack_base   = 0x5137e150
+ 0x5137e188: istate->_stack_limit  = 0x5137e140
+ 0x5137e18c: istate->_monitor_base = 0x5137e150
+ 0x5137e190: istate->_self_link    = 0x5137e150
+ 0x5137e194: frame_type            = INTERPRETER_FRAME
+ 0x5137e198: next_frame            = 0x5137e1f0
+
+ 0x5137e19c: local[2]              = 0x5c876130
+ 0x5137e1a0: local[1]              = 0x5c82f5d0
+ 0x5137e1a4: local[0]              = 0x5c876318
+ 0x5137e1a8: istate->_thread       = 0x016da070
+ 0x5137e1ac: istate->_bcp          = 0x7027122c (bci 12)
+ 0x5137e1b0: istate->_locals       = 0x5137e1f4
+ 0x5137e1b4: istate->_constants    = 0x702714b0
+ 0x5137e1b8: istate->_method       = java.awt.EventQueue$2.run()Ljava/lang/Void;
+ 0x5137e1bc: istate->_mdx          = 0x00000000
+ 0x5137e1c0: istate->_stack        = 0x5137e198
+ 0x5137e1c4: istate->_msg          = 0x00000000
+ 0x5137e1c8: istate->_result       = 0x5319e3a8
+ 0x5137e1cc: (istate->_result)     = 0x5318a250
+ 0x5137e1d0: (istate->_result)     = 0x5c802f28
+ 0x5137e1d4: istate->_prev_link    = 0x00000000
+ 0x5137e1d8: istate->_oop_temp     = 0x00000000
+ 0x5137e1dc: istate->_stack_base   = 0x5137e1a8
+ 0x5137e1e0: istate->_stack_limit  = 0x5137e198
+ 0x5137e1e4: istate->_monitor_base = 0x5137e1a8
+ 0x5137e1e8: istate->_self_link    = 0x5137e1a8
+ 0x5137e1ec: frame_type            = INTERPRETER_FRAME
+ 0x5137e1f0: next_frame            = 0x5137e240
+
+ 0x5137e1f4: local[0]              = 0x53160078
+ 0x5137e1f8: istate->_thread       = 0x016da070
+ 0x5137e1fc: istate->_bcp          = 0x702712c9 (bci 1)
+ 0x5137e200: istate->_locals       = 0x5137e244
+ 0x5137e204: istate->_constants    = 0x702714b0
+ 0x5137e208: istate->_method       = java.awt.EventQueue$2.run()Ljava/lang/Object;
+ 0x5137e20c: istate->_mdx          = 0x00000000
+ 0x5137e210: istate->_stack        = 0x5137e1f0
+ 0x5137e214: istate->_msg          = 0x00000000
+ 0x5137e218: istate->_result       = 0x5137e1dc
+ 0x5137e21c: (istate->_result)     = 0x5137e1dc
+ 0x5137e220: (istate->_result)     = 0x00000002
+ 0x5137e224: istate->_prev_link    = 0x5137e278
+ 0x5137e228: istate->_oop_temp     = 0x00000000
+ 0x5137e22c: istate->_stack_base   = 0x5137e1f8
+ 0x5137e230: istate->_stack_limit  = 0x5137e1f0
+ 0x5137e234: istate->_monitor_base = 0x5137e1f8
+ 0x5137e238: istate->_self_link    = 0x5137e1f8
+ 0x5137e23c: frame_type            = INTERPRETER_FRAME
+ 0x5137e240: next_frame            = 0x5137e250
+
+ 0x5137e244: local[0]              = 0x53160078
+ 0x5137e248: call_wrapper          = 0x512c1500
+ 0x5137e24c: frame_type            = ENTRY_FRAME
+ 0x5137e250: next_frame            = 0x5137e29c
+
+ 0x5137e254: istate->_thread       = 0x016da070
+ 0x5137e258: istate->_bcp          = 0x00000000
+ 0x5137e25c: istate->_locals       = 0x5137e2a4
+ 0x5137e260: istate->_constants    = 0x6fd77a18
+ 0x5137e264: istate->_method       = java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e268: istate->_mdx          = 0x5137e218
+ 0x5137e26c: istate->_stack        = 0x5137e230
+ 0x5137e270: istate->_msg          = 0x00000000
+ 0x5137e274: istate->_result       = 0x00000002
+ 0x5137e278: (istate->_result)     = 0x5137e2f0
+ 0x5137e27c: (istate->_result)     = 0x00000000
+ 0x5137e280: istate->_prev_link    = 0x00000000
+ 0x5137e284: istate->_oop_temp     = 0x5c876350
+ 0x5137e288: istate->_stack_base   = 0x5137e254
+ 0x5137e28c: istate->_stack_limit  = 0x5137e250
+ 0x5137e290: istate->_monitor_base = 0x5137e254
+ 0x5137e294: istate->_self_link    = 0x5137e254
+ 0x5137e298: frame_type            = INTERPRETER_FRAME
+ 0x5137e29c: next_frame            = 0x5137e2f0
+
+ 0x5137e2a0: local[1]              = 0x53160060
+ 0x5137e2a4: local[0]              = 0x53160078
+ 0x5137e2a8: istate->_thread       = 0x016da070
+ 0x5137e2ac: istate->_bcp          = 0x6fd78484 (bci 28)
+ 0x5137e2b0: istate->_locals       = 0x5137e300
+ 0x5137e2b4: istate->_constants    = 0x6fd78750
+ 0x5137e2b8: istate->_method       = java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e2bc: istate->_mdx          = 0x6fd776e0
+ 0x5137e2c0: istate->_stack        = 0x5137e29c
+ 0x5137e2c4: istate->_msg          = 0x00000000
+ 0x5137e2c8: istate->_result       = 0x00000000
+ 0x5137e2cc: (istate->_result)     = 0x6fd71c00
+ 0x5137e2d0: (istate->_result)     = 0x6fd73ec8
+ 0x5137e2d4: istate->_prev_link    = 0x6fd71b58
+ 0x5137e2d8: istate->_oop_temp     = 0x00000000
+ 0x5137e2dc: istate->_stack_base   = 0x5137e2a8
+ 0x5137e2e0: istate->_stack_limit  = 0x5137e290
+ 0x5137e2e4: istate->_monitor_base = 0x5137e2a8
+ 0x5137e2e8: istate->_self_link    = 0x5137e2a8
+ 0x5137e2ec: frame_type            = INTERPRETER_FRAME
+ 0x5137e2f0: next_frame            = 0x5137e34c
+
+ 0x5137e2f4: local[3]              = 0x5c841488
+ 0x5137e2f8: local[2]              = 0x5c8760f8
+ 0x5137e2fc: local[1]              = 0x53160078
+ 0x5137e300: local[0]              = 0x5c8763a0
+ 0x5137e304: istate->_thread       = 0x016da070
+ 0x5137e308: istate->_bcp          = 0x6fd7854e (bci 6)
+ 0x5137e30c: istate->_locals       = 0x5137e358
+ 0x5137e310: istate->_constants    = 0x6fd78750
+ 0x5137e314: istate->_method       = java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e318: istate->_mdx          = 0x5137e358
+ 0x5137e31c: istate->_stack        = 0x5137e2f0
+ 0x5137e320: istate->_msg          = 0x00000000
+ 0x5137e324: istate->_result       = 0x5137e370
+ 0x5137e328: (istate->_result)     = 0x7000a298
+ 0x5137e32c: (istate->_result)     = 0x00000000
+ 0x5137e330: istate->_prev_link    = 0x00000000
+ 0x5137e334: istate->_oop_temp     = 0x00000000
+ 0x5137e338: istate->_stack_base   = 0x5137e304
+ 0x5137e33c: istate->_stack_limit  = 0x5137e2f0
+ 0x5137e340: istate->_monitor_base = 0x5137e304
+ 0x5137e344: istate->_self_link    = 0x5137e304
+ 0x5137e348: frame_type            = INTERPRETER_FRAME
+ 0x5137e34c: next_frame            = 0x5137e3a4
+
+ 0x5137e350: local[2]              = 0x5c841488
+ 0x5137e354: local[1]              = 0x53160078
+ 0x5137e358: local[0]              = 0x5c8763a0
+ 0x5137e35c: istate->_thread       = 0x016da070
+ 0x5137e360: istate->_bcp          = 0x702717b3 (bci 11)
+ 0x5137e364: istate->_locals       = 0x5137e3a8
+ 0x5137e368: istate->_constants    = 0x70271a38
+ 0x5137e36c: istate->_method       = java.awt.EventQueue$3.run()Ljava/lang/Void;
+ 0x5137e370: istate->_mdx          = 0x53161880
+ 0x5137e374: istate->_stack        = 0x5137e34c
+ 0x5137e378: istate->_msg          = 0x00000000
+ 0x5137e37c: istate->_result       = 0x016da070
+ 0x5137e380: (istate->_result)     = 0x6ff52c61
+ 0x5137e384: (istate->_result)     = 0x5137e3e0
+ 0x5137e388: istate->_prev_link    = 0x70000760
+ 0x5137e38c: istate->_oop_temp     = 0x00000000
+ 0x5137e390: istate->_stack_base   = 0x5137e35c
+ 0x5137e394: istate->_stack_limit  = 0x5137e34c
+ 0x5137e398: istate->_monitor_base = 0x5137e35c
+ 0x5137e39c: istate->_self_link    = 0x5137e35c
+ 0x5137e3a0: frame_type            = INTERPRETER_FRAME
+ 0x5137e3a4: next_frame            = 0x5137e3f4
+
+ 0x5137e3a8: local[0]              = 0x53160048
+ 0x5137e3ac: istate->_thread       = 0x016da070
+ 0x5137e3b0: istate->_bcp          = 0x70271851 (bci 1)
+ 0x5137e3b4: istate->_locals       = 0x5137e3f8
+ 0x5137e3b8: istate->_constants    = 0x70271a38
+ 0x5137e3bc: istate->_method       = java.awt.EventQueue$3.run()Ljava/lang/Object;
+ 0x5137e3c0: istate->_mdx          = 0x00000002
+ 0x5137e3c4: istate->_stack        = 0x5137e3a4
+ 0x5137e3c8: istate->_msg          = 0x00000000
+ 0x5137e3cc: istate->_result       = 0x5319e3e0
+ 0x5137e3d0: (istate->_result)     = 0x53161880
+ 0x5137e3d4: (istate->_result)     = 0x5319e3e0
+ 0x5137e3d8: istate->_prev_link    = 0x00000000
+ 0x5137e3dc: istate->_oop_temp     = 0x00000000
+ 0x5137e3e0: istate->_stack_base   = 0x5137e3ac
+ 0x5137e3e4: istate->_stack_limit  = 0x5137e3a4
+ 0x5137e3e8: istate->_monitor_base = 0x5137e3ac
+ 0x5137e3ec: istate->_self_link    = 0x5137e3ac
+ 0x5137e3f0: frame_type            = INTERPRETER_FRAME
+ 0x5137e3f4: next_frame            = 0x5137e404
+
+ 0x5137e3f8: local[0]              = 0x53160048
+ 0x5137e3fc: call_wrapper          = 0x512c1748
+ 0x5137e400: frame_type            = ENTRY_FRAME
+ 0x5137e404: next_frame            = 0x5137e450
+
+ 0x5137e408: istate->_thread       = 0x016da070
+ 0x5137e40c: istate->_bcp          = 0x00000000
+ 0x5137e410: istate->_locals       = 0x5137e458
+ 0x5137e414: istate->_constants    = 0x6fd77a18
+ 0x5137e418: istate->_method       = java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e41c: istate->_mdx          = 0x5137e3cc
+ 0x5137e420: istate->_stack        = 0x5137e3e4
+ 0x5137e424: istate->_msg          = 0x00000000
+ 0x5137e428: istate->_result       = 0x00000002
+ 0x5137e42c: (istate->_result)     = 0x5137e4a4
+ 0x5137e430: (istate->_result)     = 0x00000000
+ 0x5137e434: istate->_prev_link    = 0x00000000
+ 0x5137e438: istate->_oop_temp     = 0x5c876350
+ 0x5137e43c: istate->_stack_base   = 0x5137e408
+ 0x5137e440: istate->_stack_limit  = 0x5137e404
+ 0x5137e444: istate->_monitor_base = 0x5137e408
+ 0x5137e448: istate->_self_link    = 0x5137e408
+ 0x5137e44c: frame_type            = INTERPRETER_FRAME
+ 0x5137e450: next_frame            = 0x5137e4a4
+
+ 0x5137e454: local[1]              = 0x5c8760f8
+ 0x5137e458: local[0]              = 0x53160048
+ 0x5137e45c: istate->_thread       = 0x016da070
+ 0x5137e460: istate->_bcp          = 0x6fd78484 (bci 28)
+ 0x5137e464: istate->_locals       = 0x5137e4b4
+ 0x5137e468: istate->_constants    = 0x6fd78750
+ 0x5137e46c: istate->_method       = java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e470: istate->_mdx          = 0x00000000
+ 0x5137e474: istate->_stack        = 0x5137e450
+ 0x5137e478: istate->_msg          = 0x00000000
+ 0x5137e47c: istate->_result       = 0x00000002
+ 0x5137e480: (istate->_result)     = 0x5137e460
+ 0x5137e484: (istate->_result)     = 0x00000000
+ 0x5137e488: istate->_prev_link    = 0x5137e454
+ 0x5137e48c: istate->_oop_temp     = 0x00000000
+ 0x5137e490: istate->_stack_base   = 0x5137e45c
+ 0x5137e494: istate->_stack_limit  = 0x5137e444
+ 0x5137e498: istate->_monitor_base = 0x5137e45c
+ 0x5137e49c: istate->_self_link    = 0x5137e45c
+ 0x5137e4a0: frame_type            = INTERPRETER_FRAME
+ 0x5137e4a4: next_frame            = 0x5137e500
+
+ 0x5137e4a8: local[3]              = 0x5c8760f8
+ 0x5137e4ac: local[2]              = 0x53160018
+ 0x5137e4b0: local[1]              = 0x53160048
+ 0x5137e4b4: local[0]              = 0x5c8763a0
+ 0x5137e4b8: istate->_thread       = 0x016da070
+ 0x5137e4bc: istate->_bcp          = 0x700052d9 (bci 73)
+ 0x5137e4c0: istate->_locals       = 0x5137e51c
+ 0x5137e4c4: istate->_constants    = 0x70006fc8
+ 0x5137e4c8: istate->_method       = java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+ 0x5137e4cc: istate->_mdx          = 0x5137e51c
+ 0x5137e4d0: istate->_stack        = 0x5137e4a4
+ 0x5137e4d4: istate->_msg          = 0x00000000
+ 0x5137e4d8: istate->_result       = 0x6ff2a8d3
+ 0x5137e4dc: (istate->_result)     = 0x5137e51c
+ 0x5137e4e0: (istate->_result)     = 0x6ff2c798
+ 0x5137e4e4: istate->_prev_link    = 0x6ff2a8e0
+ 0x5137e4e8: istate->_oop_temp     = 0x00000000
+ 0x5137e4ec: istate->_stack_base   = 0x5137e4b8
+ 0x5137e4f0: istate->_stack_limit  = 0x5137e49c
+ 0x5137e4f4: istate->_monitor_base = 0x5137e4b8
+ 0x5137e4f8: istate->_self_link    = 0x5137e4b8
+ 0x5137e4fc: frame_type            = INTERPRETER_FRAME
+ 0x5137e500: next_frame            = 0x5137e568
+
+ 0x5137e504: local[6]              = 0x5c841488
+ 0x5137e508: local[5]              = 0x5c8760f8
+ 0x5137e50c: local[4]              = 0x53160018
+ 0x5137e510: local[3]              = 0x53160078
+ 0x5137e514: local[2]              = 0x5c876130
+ 0x5137e518: local[1]              = 0x5c82f5d0
+ 0x5137e51c: local[0]              = 0x5c876318
+ 0x5137e520: istate->_thread       = 0x016da070
+ 0x5137e524: istate->_bcp          = 0x702cbe7e (bci 110)
+ 0x5137e528: istate->_locals       = 0x5137e57c
+ 0x5137e52c: istate->_constants    = 0x702cc600
+ 0x5137e530: istate->_method       = java.awt.SequencedEvent.dispatch()V
+ 0x5137e534: istate->_mdx          = 0x00000000
+ 0x5137e538: istate->_stack        = 0x5137e514
+ 0x5137e53c: istate->_msg          = 0x00000000
+ 0x5137e540: istate->_result       = 0x00000000
+ 0x5137e544: (istate->_result)     = 0x00000000
+ 0x5137e548: (istate->_result)     = 0x00000000
+ 0x5137e54c: istate->_prev_link    = 0x00000000
+ 0x5137e550: istate->_oop_temp     = 0x00000000
+ 0x5137e554: istate->_stack_base   = 0x5137e520
+ 0x5137e558: istate->_stack_limit  = 0x5137e508
+ 0x5137e55c: istate->_monitor_base = 0x5137e520
+ 0x5137e560: istate->_self_link    = 0x5137e520
+ 0x5137e564: frame_type            = INTERPRETER_FRAME
+ 0x5137e568: next_frame            = 0x5137e5c8
+
+ 0x5137e56c: local[4]              = 0x00000000
+ 0x5137e570: local[3]              = 0x00000000
+ 0x5137e574: local[2]              = 0x00000000
+ 0x5137e578: local[1]              = 0x00000000
+ 0x5137e57c: local[0]              = 0x5c803628
+ 0x5137e580: istate->_thread       = 0x016da070
+ 0x5137e584: istate->_bcp          = 0x700054a5 (bci 21)
+ 0x5137e588: istate->_locals       = 0x5137e5d4
+ 0x5137e58c: istate->_constants    = 0x70006fc8
+ 0x5137e590: istate->_method       = java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V
+ 0x5137e594: istate->_mdx          = 0x53161640
+ 0x5137e598: istate->_stack        = 0x5137e578
+ 0x5137e59c: istate->_msg          = 0x00000000
+ 0x5137e5a0: istate->_result       = 0x5137e554
+ 0x5137e5a4: (istate->_result)     = 0x00000000
+ 0x5137e5a8: (istate->_result)     = 0x5137e574
+ 0x5137e5ac: istate->_prev_link    = 0x5137e570
+ 0x5137e5b0: istate->_oop_temp     = 0x00000000
+ 0x5137e5b4: istate->_stack_base   = 0x5137e580
+ 0x5137e5b8: istate->_stack_limit  = 0x5137e570
+ 0x5137e5bc: istate->_monitor_base = 0x5137e580
+ 0x5137e5c0: istate->_self_link    = 0x5137e580
+ 0x5137e5c4: frame_type            = INTERPRETER_FRAME
+ 0x5137e5c8: next_frame            = 0x5137e620
+
+ 0x5137e5cc: local[2]              = 0x5c876130
+ 0x5137e5d0: local[1]              = 0x5c803628
+ 0x5137e5d4: local[0]              = 0x5c876318
+ 0x5137e5d8: istate->_thread       = 0x016da070
+ 0x5137e5dc: istate->_bcp          = 0x70006a53 (bci 3)
+ 0x5137e5e0: istate->_locals       = 0x5137e62c
+ 0x5137e5e4: istate->_constants    = 0x70006fc8
+ 0x5137e5e8: istate->_method       = java.awt.EventQueue.access$400(Ljava/awt/EventQueue;Ljava/awt/AWTEvent;Ljava/lang/Object;)V
+ 0x5137e5ec: istate->_mdx          = 0x5137e5b8
+ 0x5137e5f0: istate->_stack        = 0x5137e5c8
+ 0x5137e5f4: istate->_msg          = 0x00000000
+ 0x5137e5f8: istate->_result       = 0x5137e5c4
+ 0x5137e5fc: (istate->_result)     = 0x5137e5b8
+ 0x5137e600: (istate->_result)     = 0x5137e5c4
+ 0x5137e604: istate->_prev_link    = 0x5137e5c4
+ 0x5137e608: istate->_oop_temp     = 0x00000000
+ 0x5137e60c: istate->_stack_base   = 0x5137e5d8
+ 0x5137e610: istate->_stack_limit  = 0x5137e5c8
+ 0x5137e614: istate->_monitor_base = 0x5137e5d8
+ 0x5137e618: istate->_self_link    = 0x5137e5d8
+ 0x5137e61c: frame_type            = INTERPRETER_FRAME
+ 0x5137e620: next_frame            = 0x5137e678
+
+ 0x5137e624: local[2]              = 0x5c876130
+ 0x5137e628: local[1]              = 0x5c803628
+ 0x5137e62c: local[0]              = 0x5c876318
+ 0x5137e630: istate->_thread       = 0x016da070
+ 0x5137e634: istate->_bcp          = 0x7027122c (bci 12)
+ 0x5137e638: istate->_locals       = 0x5137e67c
+ 0x5137e63c: istate->_constants    = 0x702714b0
+ 0x5137e640: istate->_method       = java.awt.EventQueue$2.run()Ljava/lang/Void;
+ 0x5137e644: istate->_mdx          = 0x5137e624
+ 0x5137e648: istate->_stack        = 0x5137e620
+ 0x5137e64c: istate->_msg          = 0x00000000
+ 0x5137e650: istate->_result       = 0x5137e61c
+ 0x5137e654: (istate->_result)     = 0x5137e60c
+ 0x5137e658: (istate->_result)     = 0x5137e61c
+ 0x5137e65c: istate->_prev_link    = 0xf7409b3f
+ 0x5137e660: istate->_oop_temp     = 0x00000000
+ 0x5137e664: istate->_stack_base   = 0x5137e630
+ 0x5137e668: istate->_stack_limit  = 0x5137e620
+ 0x5137e66c: istate->_monitor_base = 0x5137e630
+ 0x5137e670: istate->_self_link    = 0x5137e630
+ 0x5137e674: frame_type            = INTERPRETER_FRAME
+ 0x5137e678: next_frame            = 0x5137e6c8
+
+ 0x5137e67c: local[0]              = 0x53160030
+ 0x5137e680: istate->_thread       = 0x016da070
+ 0x5137e684: istate->_bcp          = 0x702712c9 (bci 1)
+ 0x5137e688: istate->_locals       = 0x5137e6cc
+ 0x5137e68c: istate->_constants    = 0x702714b0
+ 0x5137e690: istate->_method       = java.awt.EventQueue$2.run()Ljava/lang/Object;
+ 0x5137e694: istate->_mdx          = 0x701ab670
+ 0x5137e698: istate->_stack        = 0x5137e678
+ 0x5137e69c: istate->_msg          = 0x00000000
+ 0x5137e6a0: istate->_result       = 0x5137e66c
+ 0x5137e6a4: (istate->_result)     = 0x5137e658
+ 0x5137e6a8: (istate->_result)     = 0x5137e66c
+ 0x5137e6ac: istate->_prev_link    = 0x5137e66c
+ 0x5137e6b0: istate->_oop_temp     = 0x00000000
+ 0x5137e6b4: istate->_stack_base   = 0x5137e680
+ 0x5137e6b8: istate->_stack_limit  = 0x5137e678
+ 0x5137e6bc: istate->_monitor_base = 0x5137e680
+ 0x5137e6c0: istate->_self_link    = 0x5137e680
+ 0x5137e6c4: frame_type            = INTERPRETER_FRAME
+ 0x5137e6c8: next_frame            = 0x5137e6d8
+
+ 0x5137e6cc: local[0]              = 0x53160030
+ 0x5137e6d0: call_wrapper          = 0x512c19a8
+ 0x5137e6d4: frame_type            = ENTRY_FRAME
+ 0x5137e6d8: next_frame            = 0x5137e724
+
+ 0x5137e6dc: istate->_thread       = 0x016da070
+ 0x5137e6e0: istate->_bcp          = 0x00000000
+ 0x5137e6e4: istate->_locals       = 0x5137e72c
+ 0x5137e6e8: istate->_constants    = 0x6fd77a18
+ 0x5137e6ec: istate->_method       = java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e6f0: istate->_mdx          = 0x5137e6a0
+ 0x5137e6f4: istate->_stack        = 0x5137e6b8
+ 0x5137e6f8: istate->_msg          = 0x00000000
+ 0x5137e6fc: istate->_result       = 0x00000002
+ 0x5137e700: (istate->_result)     = 0x5137e778
+ 0x5137e704: (istate->_result)     = 0x00000000
+ 0x5137e708: istate->_prev_link    = 0x00000000
+ 0x5137e70c: istate->_oop_temp     = 0x5c876350
+ 0x5137e710: istate->_stack_base   = 0x5137e6dc
+ 0x5137e714: istate->_stack_limit  = 0x5137e6d8
+ 0x5137e718: istate->_monitor_base = 0x5137e6dc
+ 0x5137e71c: istate->_self_link    = 0x5137e6dc
+ 0x5137e720: frame_type            = INTERPRETER_FRAME
+ 0x5137e724: next_frame            = 0x5137e778
+
+ 0x5137e728: local[1]              = 0x53160018
+ 0x5137e72c: local[0]              = 0x53160030
+ 0x5137e730: istate->_thread       = 0x016da070
+ 0x5137e734: istate->_bcp          = 0x6fd78484 (bci 28)
+ 0x5137e738: istate->_locals       = 0x5137e788
+ 0x5137e73c: istate->_constants    = 0x6fd78750
+ 0x5137e740: istate->_method       = java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e744: istate->_mdx          = 0x6fd776e0
+ 0x5137e748: istate->_stack        = 0x5137e724
+ 0x5137e74c: istate->_msg          = 0x00000000
+ 0x5137e750: istate->_result       = 0x00000000
+ 0x5137e754: (istate->_result)     = 0x5137e720
+ 0x5137e758: (istate->_result)     = 0x5137e710
+ 0x5137e75c: istate->_prev_link    = 0x5137e720
+ 0x5137e760: istate->_oop_temp     = 0x00000000
+ 0x5137e764: istate->_stack_base   = 0x5137e730
+ 0x5137e768: istate->_stack_limit  = 0x5137e718
+ 0x5137e76c: istate->_monitor_base = 0x5137e730
+ 0x5137e770: istate->_self_link    = 0x5137e730
+ 0x5137e774: frame_type            = INTERPRETER_FRAME
+ 0x5137e778: next_frame            = 0x5137e7d4
+
+ 0x5137e77c: local[3]              = 0x5c82f5b8
+ 0x5137e780: local[2]              = 0x5c8760f8
+ 0x5137e784: local[1]              = 0x53160030
+ 0x5137e788: local[0]              = 0x5c8763a0
+ 0x5137e78c: istate->_thread       = 0x016da070
+ 0x5137e790: istate->_bcp          = 0x6fd7854e (bci 6)
+ 0x5137e794: istate->_locals       = 0x5137e7e0
+ 0x5137e798: istate->_constants    = 0x6fd78750
+ 0x5137e79c: istate->_method       = java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e7a0: istate->_mdx          = 0x5137e7e0
+ 0x5137e7a4: istate->_stack        = 0x5137e778
+ 0x5137e7a8: istate->_msg          = 0x00000000
+ 0x5137e7ac: istate->_result       = 0x00000000
+ 0x5137e7b0: (istate->_result)     = 0x5137e77c
+ 0x5137e7b4: (istate->_result)     = 0x00000000
+ 0x5137e7b8: istate->_prev_link    = 0x5137e77c
+ 0x5137e7bc: istate->_oop_temp     = 0x00000000
+ 0x5137e7c0: istate->_stack_base   = 0x5137e78c
+ 0x5137e7c4: istate->_stack_limit  = 0x5137e778
+ 0x5137e7c8: istate->_monitor_base = 0x5137e78c
+ 0x5137e7cc: istate->_self_link    = 0x5137e78c
+ 0x5137e7d0: frame_type            = INTERPRETER_FRAME
+ 0x5137e7d4: next_frame            = 0x5137e82c
+
+ 0x5137e7d8: local[2]              = 0x5c82f5b8
+ 0x5137e7dc: local[1]              = 0x53160030
+ 0x5137e7e0: local[0]              = 0x5c8763a0
+ 0x5137e7e4: istate->_thread       = 0x016da070
+ 0x5137e7e8: istate->_bcp          = 0x702717b3 (bci 11)
+ 0x5137e7ec: istate->_locals       = 0x5137e830
+ 0x5137e7f0: istate->_constants    = 0x70271a38
+ 0x5137e7f4: istate->_method       = java.awt.EventQueue$3.run()Ljava/lang/Void;
+ 0x5137e7f8: istate->_mdx          = 0x00000000
+ 0x5137e7fc: istate->_stack        = 0x5137e7d4
+ 0x5137e800: istate->_msg          = 0x00000000
+ 0x5137e804: istate->_result       = 0x00000000
+ 0x5137e808: (istate->_result)     = 0x5137e7d4
+ 0x5137e80c: (istate->_result)     = 0x5137e7c4
+ 0x5137e810: istate->_prev_link    = 0x5137e7d4
+ 0x5137e814: istate->_oop_temp     = 0x00000000
+ 0x5137e818: istate->_stack_base   = 0x5137e7e4
+ 0x5137e81c: istate->_stack_limit  = 0x5137e7d4
+ 0x5137e820: istate->_monitor_base = 0x5137e7e4
+ 0x5137e824: istate->_self_link    = 0x5137e7e4
+ 0x5137e828: frame_type            = INTERPRETER_FRAME
+ 0x5137e82c: next_frame            = 0x5137e87c
+
+ 0x5137e830: local[0]              = 0x53160000
+ 0x5137e834: istate->_thread       = 0x016da070
+ 0x5137e838: istate->_bcp          = 0x70271851 (bci 1)
+ 0x5137e83c: istate->_locals       = 0x5137e880
+ 0x5137e840: istate->_constants    = 0x70271a38
+ 0x5137e844: istate->_method       = java.awt.EventQueue$3.run()Ljava/lang/Object;
+ 0x5137e848: istate->_mdx          = 0x00000000
+ 0x5137e84c: istate->_stack        = 0x5137e82c
+ 0x5137e850: istate->_msg          = 0x00000000
+ 0x5137e854: istate->_result       = 0x70003f20
+ 0x5137e858: (istate->_result)     = 0x00000000
+ 0x5137e85c: (istate->_result)     = 0x00000000
+ 0x5137e860: istate->_prev_link    = 0x531618b8
+ 0x5137e864: istate->_oop_temp     = 0x00000000
+ 0x5137e868: istate->_stack_base   = 0x5137e834
+ 0x5137e86c: istate->_stack_limit  = 0x5137e82c
+ 0x5137e870: istate->_monitor_base = 0x5137e834
+ 0x5137e874: istate->_self_link    = 0x5137e834
+ 0x5137e878: frame_type            = INTERPRETER_FRAME
+ 0x5137e87c: next_frame            = 0x5137e88c
+
+ 0x5137e880: local[0]              = 0x53160000
+ 0x5137e884: call_wrapper          = 0x512c1bf0
+ 0x5137e888: frame_type            = ENTRY_FRAME
+ 0x5137e88c: next_frame            = 0x5137e8d8
+
+ 0x5137e890: istate->_thread       = 0x016da070
+ 0x5137e894: istate->_bcp          = 0x00000000
+ 0x5137e898: istate->_locals       = 0x5137e8e0
+ 0x5137e89c: istate->_constants    = 0x6fd77a18
+ 0x5137e8a0: istate->_method       = java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e8a4: istate->_mdx          = 0x5137e854
+ 0x5137e8a8: istate->_stack        = 0x5137e86c
+ 0x5137e8ac: istate->_msg          = 0x00000000
+ 0x5137e8b0: istate->_result       = 0x00000002
+ 0x5137e8b4: (istate->_result)     = 0x5137e92c
+ 0x5137e8b8: (istate->_result)     = 0x00000000
+ 0x5137e8bc: istate->_prev_link    = 0x00000000
+ 0x5137e8c0: istate->_oop_temp     = 0x5c876350
+ 0x5137e8c4: istate->_stack_base   = 0x5137e890
+ 0x5137e8c8: istate->_stack_limit  = 0x5137e88c
+ 0x5137e8cc: istate->_monitor_base = 0x5137e890
+ 0x5137e8d0: istate->_self_link    = 0x5137e890
+ 0x5137e8d4: frame_type            = INTERPRETER_FRAME
+ 0x5137e8d8: next_frame            = 0x5137e92c
+
+ 0x5137e8dc: local[1]              = 0x5c8760f8
+ 0x5137e8e0: local[0]              = 0x53160000
+ 0x5137e8e4: istate->_thread       = 0x016da070
+ 0x5137e8e8: istate->_bcp          = 0x6fd78484 (bci 28)
+ 0x5137e8ec: istate->_locals       = 0x5137e93c
+ 0x5137e8f0: istate->_constants    = 0x6fd78750
+ 0x5137e8f4: istate->_method       = java.security.AccessControlContext$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+ 0x5137e8f8: istate->_mdx          = 0x00000000
+ 0x5137e8fc: istate->_stack        = 0x5137e8d8
+ 0x5137e900: istate->_msg          = 0x00000000
+ 0x5137e904: istate->_result       = 0x6fd8fd60
+ 0x5137e908: (istate->_result)     = 0x5137e8e8
+ 0x5137e90c: (istate->_result)     = 0x00000000
+ 0x5137e910: istate->_prev_link    = 0x5137e8dc
+ 0x5137e914: istate->_oop_temp     = 0x00000000
+ 0x5137e918: istate->_stack_base   = 0x5137e8e4
+ 0x5137e91c: istate->_stack_limit  = 0x5137e8cc
+ 0x5137e920: istate->_monitor_base = 0x5137e8e4
+ 0x5137e924: istate->_self_link    = 0x5137e8e4
+ 0x5137e928: frame_type            = INTERPRETER_FRAME
+ 0x5137e92c: next_frame            = 0x5137e988
+
+ 0x5137e930: local[3]              = 0x5c8760f8
+ 0x5137e934: local[2]              = 0x531600a8
+ 0x5137e938: local[1]              = 0x53160000
+ 0x5137e93c: local[0]              = 0x5c8763a0
+ 0x5137e940: istate->_thread       = 0x016da070
+ 0x5137e944: istate->_bcp          = 0x700052d9 (bci 73)
+ 0x5137e948: istate->_locals       = 0x5137e9a4
+ 0x5137e94c: istate->_constants    = 0x70006fc8
+ 0x5137e950: istate->_method       = java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V
+ 0x5137e954: istate->_mdx          = 0x016da070
+ 0x5137e958: istate->_stack        = 0x5137e92c
+ 0x5137e95c: istate->_msg          = 0x00000000
+ 0x5137e960: istate->_result       = 0x6fefd108
+ 0x5137e964: (istate->_result)     = 0x6fefbd28
+ 0x5137e968: (istate->_result)     = 0x00000000
+ 0x5137e96c: istate->_prev_link    = 0x5137e94c
+ 0x5137e970: istate->_oop_temp     = 0x00000000
+ 0x5137e974: istate->_stack_base   = 0x5137e940
+ 0x5137e978: istate->_stack_limit  = 0x5137e924
+ 0x5137e97c: istate->_monitor_base = 0x5137e940
+ 0x5137e980: istate->_self_link    = 0x5137e940
+ 0x5137e984: frame_type            = INTERPRETER_FRAME
+ 0x5137e988: next_frame            = 0x5137e9f8
+
+ 0x5137e98c: local[6]              = 0x5c82f5b8
+ 0x5137e990: local[5]              = 0x5c8760f8
+ 0x5137e994: local[4]              = 0x531600a8
+ 0x5137e998: local[3]              = 0x53160030
+ 0x5137e99c: local[2]              = 0x5c876130
+ 0x5137e9a0: local[1]              = 0x5c803628
+ 0x5137e9a4: local[0]              = 0x5c876318
+ 0x5137e9a8: monitor[0]->_lock     = 0x00000009
+ 0x5137e9ac: monitor[0]->_obj      = 0x00000000
+ 0x5137e9b0: istate->_thread       = 0x016da070
+ 0x5137e9b4: istate->_bcp          = 0x7026a600 (bci 192)
+ 0x5137e9b8: istate->_locals       = 0x5137ea1c
+ 0x5137e9bc: istate->_constants    = 0x7026d610
+ 0x5137e9c0: istate->_method       = java.awt.EventDispatchThread.pumpOneEventForFilters(I)Z
+ 0x5137e9c4: istate->_mdx          = 0x5137ea18
+ 0x5137e9c8: istate->_stack        = 0x5137e99c
+ 0x5137e9cc: istate->_msg          = 0x00000000
+ 0x5137e9d0: istate->_result       = 0x016da070
+ 0x5137e9d4: (istate->_result)     = 0x6fd273ba
+ 0x5137e9d8: (istate->_result)     = 0x5137ea1c
+ 0x5137e9dc: istate->_prev_link    = 0x6fd6a438
+ 0x5137e9e0: istate->_oop_temp     = 0x00000000
+ 0x5137e9e4: istate->_stack_base   = 0x5137e9a8
+ 0x5137e9e8: istate->_stack_limit  = 0x5137e994
+ 0x5137e9ec: istate->_monitor_base = 0x5137e9b0
+ 0x5137e9f0: istate->_self_link    = 0x5137e9b0
+ 0x5137e9f4: frame_type            = INTERPRETER_FRAME
+ 0x5137e9f8: next_frame            = 0x5137ea68
+
+ 0x5137e9fc: local[8]              = 0x00000000
+ 0x5137ea00: local[7]              = 0x5c7b7ea0
+ 0x5137ea04: local[6]              = 0x53161968
+ 0x5137ea08: local[5]              = 0xffffffff
+ 0x5137ea0c: local[4]              = 0x5c8763a8
+ 0x5137ea10: local[3]              = 0x00000001
+ 0x5137ea14: local[2]              = 0x5c803628
+ 0x5137ea18: local[1]              = 0xffffffff
+ 0x5137ea1c: local[0]              = 0x5c876078
+ 0x5137ea20: istate->_thread       = 0x016da070
+ 0x5137ea24: istate->_bcp          = 0x7026a15e (bci 30)
+ 0x5137ea28: istate->_locals       = 0x5137ea78
+ 0x5137ea2c: istate->_constants    = 0x7026d610
+ 0x5137ea30: istate->_method       = java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V
+ 0x5137ea34: istate->_mdx          = 0x00000000
+ 0x5137ea38: istate->_stack        = 0x5137ea14
+ 0x5137ea3c: istate->_msg          = 0x00000000
+ 0x5137ea40: istate->_result       = 0x00000000
+ 0x5137ea44: (istate->_result)     = 0x00000000
+ 0x5137ea48: (istate->_result)     = 0x00000000
+ 0x5137ea4c: istate->_prev_link    = 0x5137ea18
+ 0x5137ea50: istate->_oop_temp     = 0x00000000
+ 0x5137ea54: istate->_stack_base   = 0x5137ea20
+ 0x5137ea58: istate->_stack_limit  = 0x5137ea14
+ 0x5137ea5c: istate->_monitor_base = 0x5137ea20
+ 0x5137ea60: istate->_self_link    = 0x5137ea20
+ 0x5137ea64: frame_type            = INTERPRETER_FRAME
+ 0x5137ea68: next_frame            = 0x5137eac4
+
+ 0x5137ea6c: local[3]              = 0x5c8763d0
+ 0x5137ea70: local[2]              = 0x5c8763c0
+ 0x5137ea74: local[1]              = 0xffffffff
+ 0x5137ea78: local[0]              = 0x5c876078
+ 0x5137ea7c: istate->_thread       = 0x016da070
+ 0x5137ea80: istate->_bcp          = 0x70269fcb (bci 11)
+ 0x5137ea84: istate->_locals       = 0x5137ead4
+ 0x5137ea88: istate->_constants    = 0x7026d610
+ 0x5137ea8c: istate->_method       = java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V
+ 0x5137ea90: istate->_mdx          = 0x00000000
+ 0x5137ea94: istate->_stack        = 0x5137ea68
+ 0x5137ea98: istate->_msg          = 0x00000000
+ 0x5137ea9c: istate->_result       = 0x00000000
+ 0x5137eaa0: (istate->_result)     = 0x00000000
+ 0x5137eaa4: (istate->_result)     = 0x00000000
+ 0x5137eaa8: istate->_prev_link    = 0x00000000
+ 0x5137eaac: istate->_oop_temp     = 0x00000000
+ 0x5137eab0: istate->_stack_base   = 0x5137ea7c
+ 0x5137eab4: istate->_stack_limit  = 0x5137ea60
+ 0x5137eab8: istate->_monitor_base = 0x5137ea7c
+ 0x5137eabc: istate->_self_link    = 0x5137ea7c
+ 0x5137eac0: frame_type            = INTERPRETER_FRAME
+ 0x5137eac4: next_frame            = 0x5137eb20
+
+ 0x5137eac8: local[3]              = 0x00000000
+ 0x5137eacc: local[2]              = 0x5c8763c0
+ 0x5137ead0: local[1]              = 0xffffffff
+ 0x5137ead4: local[0]              = 0x5c876078
+ 0x5137ead8: istate->_thread       = 0x016da070
+ 0x5137eadc: istate->_bcp          = 0x70269f0c (bci 4)
+ 0x5137eae0: istate->_locals       = 0x5137eb2c
+ 0x5137eae4: istate->_constants    = 0x7026d610
+ 0x5137eae8: istate->_method       = java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V
+ 0x5137eaec: istate->_mdx          = 0x00000000
+ 0x5137eaf0: istate->_stack        = 0x5137eac4
+ 0x5137eaf4: istate->_msg          = 0x00000000
+ 0x5137eaf8: istate->_result       = 0x00000000
+ 0x5137eafc: (istate->_result)     = 0x00000000
+ 0x5137eb00: (istate->_result)     = 0x00000000
+ 0x5137eb04: istate->_prev_link    = 0x00000000
+ 0x5137eb08: istate->_oop_temp     = 0x00000000
+ 0x5137eb0c: istate->_stack_base   = 0x5137ead8
+ 0x5137eb10: istate->_stack_limit  = 0x5137eac4
+ 0x5137eb14: istate->_monitor_base = 0x5137ead8
+ 0x5137eb18: istate->_self_link    = 0x5137ead8
+ 0x5137eb1c: frame_type            = INTERPRETER_FRAME
+ 0x5137eb20: next_frame            = 0x5137eb78
+
+ 0x5137eb24: local[2]              = 0x5c8763c0
+ 0x5137eb28: local[1]              = 0xffffffff
+ 0x5137eb2c: local[0]              = 0x5c876078
+ 0x5137eb30: istate->_thread       = 0x016da070
+ 0x5137eb34: istate->_bcp          = 0x70269dab (bci 3)
+ 0x5137eb38: istate->_locals       = 0x5137eb80
+ 0x5137eb3c: istate->_constants    = 0x7026d610
+ 0x5137eb40: istate->_method       = java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V
+ 0x5137eb44: istate->_mdx          = 0x00000000
+ 0x5137eb48: istate->_stack        = 0x5137eb20
+ 0x5137eb4c: istate->_msg          = 0x00000000
+ 0x5137eb50: istate->_result       = 0x01631998
+ 0x5137eb54: (istate->_result)     = 0x016da6b4
+ 0x5137eb58: (istate->_result)     = 0x00000000
+ 0x5137eb5c: istate->_prev_link    = 0x5137eb28
+ 0x5137eb60: istate->_oop_temp     = 0x00000000
+ 0x5137eb64: istate->_stack_base   = 0x5137eb30
+ 0x5137eb68: istate->_stack_limit  = 0x5137eb20
+ 0x5137eb6c: istate->_monitor_base = 0x5137eb30
+ 0x5137eb70: istate->_self_link    = 0x5137eb30
+ 0x5137eb74: frame_type            = INTERPRETER_FRAME
+ 0x5137eb78: next_frame            = 0x5137ebcc
+
+ 0x5137eb7c: local[1]              = 0x5c8763c0
+ 0x5137eb80: local[0]              = 0x5c876078
+ 0x5137eb84: istate->_thread       = 0x016da070
+ 0x5137eb88: istate->_bcp          = 0x70269c69 (bci 9)
+ 0x5137eb8c: istate->_locals       = 0x5137ebe4
+ 0x5137eb90: istate->_constants    = 0x7026d610
+ 0x5137eb94: istate->_method       = java.awt.EventDispatchThread.run()V
+ 0x5137eb98: istate->_mdx          = 0x00000014
+ 0x5137eb9c: istate->_stack        = 0x5137eb78
+ 0x5137eba0: istate->_msg          = 0x00000000
+ 0x5137eba4: istate->_result       = 0x76ef2220
+ 0x5137eba8: (istate->_result)     = 0x76edd994
+ 0x5137ebac: (istate->_result)     = 0x00000000
+ 0x5137ebb0: istate->_prev_link    = 0x00000000
+ 0x5137ebb4: istate->_oop_temp     = 0x00000000
+ 0x5137ebb8: istate->_stack_base   = 0x5137eb84
+ 0x5137ebbc: istate->_stack_limit  = 0x5137eb70
+ 0x5137ebc0: istate->_monitor_base = 0x5137eb84
+ 0x5137ebc4: istate->_self_link    = 0x5137eb84
+ 0x5137ebc8: frame_type            = INTERPRETER_FRAME
+ 0x5137ebcc: next_frame            = 0x5137ebf0
+
+ 0x5137ebd0: local[5]              = 0x00000000
+ 0x5137ebd4: local[4]              = 0x00000000
+ 0x5137ebd8: local[3]              = 0x00000000
+ 0x5137ebdc: local[2]              = 0x00000000
+ 0x5137ebe0: local[1]              = 0x00000000
+ 0x5137ebe4: local[0]              = 0x5c876078
+ 0x5137ebe8: call_wrapper          = 0x5137ec60
+ 0x5137ebec: frame_type            = ENTRY_FRAME
+ 0x5137ebf0: next_frame            = 0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x518e1b20 JavaThread "pool-1-thread-1" [_thread_blocked, id=13345, stack(0x51080000,0x51200000)]
+=>0x016da070 JavaThread "AWT-EventQueue-1" [_thread_in_Java, id=13342, stack(0x51200000,0x51380000)]
+  0x518e83c0 JavaThread "AWT-Shutdown" [_thread_blocked, id=13341, stack(0x51380000,0x51500000)]
+  0x5186d248 JavaThread "AWT-XAWT" daemon [_thread_blocked, id=13340, stack(0x51680000,0x51800000)]
+  0x521daa20 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=13339, stack(0x51a65000,0x51be5000)]
+  0x52100488 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=13335, stack(0x51f80000,0x52100000)]
+  0x016cdf48 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13333, stack(0x522d9000,0x52459000)]
+  0x0168be70 JavaThread "Finalizer" daemon [_thread_blocked, id=13332, stack(0x525d0000,0x52750000)]
+  0x0168a8e8 JavaThread "Reference Handler" daemon [_thread_blocked, id=13331, stack(0x52750000,0x528d0000)]
+  0x0160f000 JavaThread "main" [_thread_in_vm, id=13329, stack(0x75e54000,0x75fd3000)]
+
+Other Threads:
+  0x0167ed38 VMThread [stack: 0x528d1000,0x52970000] [id=13330]
+  0x521021d8 WatcherThread [stack: 0x5223a000,0x522d9000] [id=13337]
+
+VM state:synchronizing (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0160e140] Safepoint_lock - owner thread: 0x0167ed38
+[0x0160e1a8] Threads_lock - owner thread: 0x0167ed38
+[0x0160e5b8] Heap_lock - owner thread: 0x0160f000
+
+Heap
+ def new generation   total 4480K, used 4122K [0x52d00000, 0x531c0000, 0x5c7a0000)
+  eden space 4096K,  99% used [0x52d00000, 0x530ffcb8, 0x53100000)
+  from space 384K,   6% used [0x53160000, 0x53166b50, 0x531c0000)
+  to   space 384K,   0% used [0x53100000, 0x53100000, 0x53160000)
+ tenured generation   total 9984K, used 1229K [0x5c7a0000, 0x5d160000, 0x6fd00000)
+   the space 9984K,  12% used [0x5c7a0000, 0x5c8d3518, 0x5c8d3600, 0x5d160000)
+ compacting perm gen  total 6912K, used 6677K [0x6fd00000, 0x703c0000, 0x73d00000)
+   the space 6912K,  96% used [0x6fd00000, 0x703855e8, 0x70385600, 0x703c0000)
+No shared spaces configured.
+
+Card table byte_map: [0x52bf7000,0x52d00000] byte_map_base: 0x52960800
+
+Polling page: 0x76f68000
+
+Code Cache  [0x73d9b000, 0x73dc3000, 0x75d9b000)
+ total_blobs=178 nmethods=0 adapters=171 free_code_cache=32691Kb largest_free_block=33476480
+
+Compilation events (0 events):
+No events
+
+GC Heap History (6 events):
+Event: 5.234 GC heap before
+{Heap before GC invocations=0 (full 0):
+ def new generation   total 4480K, used 4095K [0x52d00000, 0x531c0000, 0x5c7a0000)
+  eden space 4096K,  99% used [0x52d00000, 0x530fff80, 0x53100000)
+  from space 384K,   0% used [0x53100000, 0x53100000, 0x53160000)
+  to   space 384K,   0% used [0x53160000, 0x53160000, 0x531c0000)
+ tenured generation   total 9984K, used 0K [0x5c7a0000, 0x5d160000, 0x6fd00000)
+   the space 9984K,   0% used [0x5c7a0000, 0x5c7a0000, 0x5c7a0200, 0x5d160000)
+ compacting perm gen  total 6656K, used 6598K [0x6fd00000, 0x70380000, 0x73d00000)
+   the space 6656K,  99% used [0x6fd00000, 0x70371bf8, 0x70371c00, 0x70380000)
+No shared spaces configured.
+Event: 5.303 GC heap after
+Heap after GC invocations=1 (full 0):
+ def new generation   total 4480K, used 384K [0x52d00000, 0x531c0000, 0x5c7a0000)
+  eden space 4096K,   0% used [0x52d00000, 0x52d00000, 0x53100000)
+  from space 384K, 100% used [0x53160000, 0x531c0000, 0x531c0000)
+  to   space 384K,   0% used [0x53100000, 0x53100000, 0x53160000)
+ tenured generation   total 9984K, used 851K [0x5c7a0000, 0x5d160000, 0x6fd00000)
+   the space 9984K,   8% used [0x5c7a0000, 0x5c874c40, 0x5c874e00, 0x5d160000)
+ compacting perm gen  total 6656K, used 6598K [0x6fd00000, 0x70380000, 0x73d00000)
+   the space 6656K,  99% used [0x6fd00000, 0x70371bf8, 0x70371c00, 0x70380000)
+No shared spaces configured.
+}
+Event: 5.329 GC heap before
+{Heap before GC invocations=1 (full 0):
+ def new generation   total 4480K, used 4476K [0x52d00000, 0x531c0000, 0x5c7a0000)
+  eden space 4096K,  99% used [0x52d00000, 0x530ff250, 0x53100000)
+  from space 384K, 100% used [0x53160000, 0x531c0000, 0x531c0000)
+  to   space 384K,   0% used [0x53100000, 0x53100000, 0x53160000)
+ tenured generation   total 9984K, used 851K [0x5c7a0000, 0x5d160000, 0x6fd00000)
+   the space 9984K,   8% used [0x5c7a0000, 0x5c874c40, 0x5c874e00, 0x5d160000)
+ compacting perm gen  total 6656K, used 6606K [0x6fd00000, 0x70380000, 0x73d00000)
+   the space 6656K,  99% used [0x6fd00000, 0x70373bc0, 0x70373c00, 0x70380000)
+No shared spaces configured.
+Event: 5.374 GC heap after
+Heap after GC invocations=2 (full 0):
+ def new generation   total 4480K, used 12K [0x52d00000, 0x531c0000, 0x5c7a0000)
+  eden space 4096K,   0% used [0x52d00000, 0x52d00000, 0x53100000)
+  from space 384K,   3% used [0x53100000, 0x53103398, 0x53160000)
+  to   space 384K,   0% used [0x53160000, 0x53160000, 0x531c0000)
+ tenured generation   total 9984K, used 1229K [0x5c7a0000, 0x5d160000, 0x6fd00000)
+   the space 9984K,  12% used [0x5c7a0000, 0x5c8d3518, 0x5c8d3600, 0x5d160000)
+ compacting perm gen  total 6656K, used 6606K [0x6fd00000, 0x70380000, 0x73d00000)
+   the space 6656K,  99% used [0x6fd00000, 0x70373bc0, 0x70373c00, 0x70380000)
+No shared spaces configured.
+}
+Event: 5.401 GC heap before
+{Heap before GC invocations=2 (full 0):
+ def new generation   total 4480K, used 4102K [0x52d00000, 0x531c0000, 0x5c7a0000)
+  eden space 4096K,  99% used [0x52d00000, 0x530fe5d0, 0x53100000)
+  from space 384K,   3% used [0x53100000, 0x53103398, 0x53160000)
+  to   space 384K,   0% used [0x53160000, 0x53160000, 0x531c0000)
+ tenured generation   total 9984K, used 1229K [0x5c7a0000, 0x5d160000, 0x6fd00000)
+   the space 9984K,  12% used [0x5c7a0000, 0x5c8d3518, 0x5c8d3600, 0x5d160000)
+ compacting perm gen  total 6912K, used 6657K [0x6fd00000, 0x703c0000, 0x73d00000)
+   the space 6912K,  96% used [0x6fd00000, 0x70380750, 0x70380800, 0x703c0000)
+No shared spaces configured.
+Event: 5.427 GC heap after
+Heap after GC invocations=3 (full 0):
+ def new generation   total 4480K, used 26K [0x52d00000, 0x531c0000, 0x5c7a0000)
+  eden space 4096K,   0% used [0x52d00000, 0x52d00000, 0x53100000)
+  from space 384K,   6% used [0x53160000, 0x53166b50, 0x531c0000)
+  to   space 384K,   0% used [0x53100000, 0x53100000, 0x53160000)
+ tenured generation   total 9984K, used 1229K [0x5c7a0000, 0x5d160000, 0x6fd00000)
+   the space 9984K,  12% used [0x5c7a0000, 0x5c8d3518, 0x5c8d3600, 0x5d160000)
+ compacting perm gen  total 6912K, used 6657K [0x6fd00000, 0x703c0000, 0x73d00000)
+   the space 6912K,  96% used [0x6fd00000, 0x70380750, 0x70380800, 0x703c0000)
+No shared spaces configured.
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 4.394 Thread 0x0160f000 Threw 0x52f16948 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/classfile/systemDictionary.cpp:179
+Event: 4.394 Thread 0x0160f000 Threw 0x52f16d00 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1272
+Event: 5.036 Thread 0x0160f000 Threw 0x52f930b8 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/classfile/systemDictionary.cpp:179
+Event: 5.037 Thread 0x0160f000 Threw 0x52f93338 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1272
+Event: 5.039 Thread 0x0160f000 Threw 0x52f943f8 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/classfile/systemDictionary.cpp:179
+Event: 5.039 Thread 0x0160f000 Threw 0x52f94678 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1272
+Event: 5.044 Thread 0x0160f000 Threw 0x52f95618 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/classfile/systemDictionary.cpp:179
+Event: 5.044 Thread 0x0160f000 Threw 0x52f958a0 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1272
+Event: 5.048 Thread 0x0160f000 Threw 0x52f97370 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/classfile/systemDictionary.cpp:179
+Event: 5.049 Thread 0x0160f000 Threw 0x52f97620 at /openjdk-6-6b34-1.13.6.new/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1272
+
+Events (10 events):
+Event: 5.390 loading class 0x0172de10 done
+Event: 5.390 loading class 0x0172de50
+Event: 5.391 loading class 0x0172de50 done
+Event: 5.391 loading class 0x0172de90
+Event: 5.391 loading class 0x0172de90 done
+Event: 5.391 loading class 0x0172dec8
+Event: 5.392 loading class 0x0172dec8 done
+Event: 5.399 Executing VM operation: GenCollectForAllocation
+Event: 5.427 Executing VM operation: GenCollectForAllocation done
+Event: 5.434 loading class 0x5187e5a0 done
+
+
+Dynamic libraries:
+00008000-00012000 r-xp 00000000 b3:06 536483     /usr/lib/jvm/java-6-openjdk-armhf/jre/bin/java
+00019000-0001a000 rw-p 00009000 b3:06 536483     /usr/lib/jvm/java-6-openjdk-armhf/jre/bin/java
+01608000-017b5000 rw-p 00000000 00:00 0          [heap]
+50fc6000-51078000 r-xp 00000000 b3:06 536418     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libmlib_image.so
+51078000-5107f000 ---p 000b2000 b3:06 536418     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libmlib_image.so
+5107f000-51080000 rw-p 000b1000 b3:06 536418     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libmlib_image.so
+51080000-51083000 ---p 00000000 00:00 0 
+51083000-51200000 rw-p 00000000 00:00 0          [stack:13345]
+51200000-51203000 ---p 00000000 00:00 0 
+51203000-51380000 rw-p 00000000 00:00 0          [stack:13342]
+51380000-51383000 ---p 00000000 00:00 0 
+51383000-51500000 rw-p 00000000 00:00 0          [stack:13341]
+51500000-51543000 rw-p 00000000 00:00 0 
+51543000-51600000 ---p 00000000 00:00 0 
+51680000-51683000 ---p 00000000 00:00 0 
+51683000-51800000 rw-p 00000000 00:00 0          [stack:13340]
+51800000-518ff000 rw-p 00000000 00:00 0 
+518ff000-51900000 ---p 00000000 00:00 0 
+519b0000-519b7000 r--s 00000000 b3:06 135265     /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le32d8.cache-3
+519b7000-519bf000 r--s 00000000 b3:06 135267     /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le32d8.cache-3
+519da000-519e0000 r-xp 00000000 b3:06 534048     /usr/lib/arm-linux-gnueabihf/libXrandr.so.2.2.0
+519e0000-519e7000 ---p 00006000 b3:06 534048     /usr/lib/arm-linux-gnueabihf/libXrandr.so.2.2.0
+519e7000-519e8000 rw-p 00005000 b3:06 534048     /usr/lib/arm-linux-gnueabihf/libXrandr.so.2.2.0
+519e8000-519ef000 r--s 00000000 b3:06 135265     /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le32d8.cache-3
+519ef000-519f7000 r--s 00000000 b3:06 135267     /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le32d8.cache-3
+519f7000-51a07000 r--s 00000000 b3:06 135262     /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le32d8.cache-3
+51a0c000-51a11000 r--s 00000000 b3:06 135249     /var/cache/fontconfig/1c2c2997deddd45e0296fa5a60917b7d-le32d8.cache-3
+51a11000-51a21000 r--s 00000000 b3:06 135262     /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le32d8.cache-3
+51a2c000-51a30000 r-xp 00000000 b3:06 533743     /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+51a30000-51a37000 ---p 00004000 b3:06 533743     /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+51a37000-51a38000 r--p 00003000 b3:06 533743     /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+51a38000-51a39000 rw-p 00004000 b3:06 533743     /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+51a39000-51a41000 r-xp 00000000 b3:06 534933     /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+51a41000-51a48000 ---p 00008000 b3:06 534933     /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+51a48000-51a49000 rw-p 00007000 b3:06 534933     /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+51a58000-51a5e000 r--s 00000000 b3:06 135253     /var/cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le32d8.cache-3
+51a5e000-51a65000 r--s 00000000 b3:06 135266     /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le32d8.cache-3
+51a65000-51a68000 ---p 00000000 00:00 0 
+51a68000-51be5000 rw-p 00000000 00:00 0          [stack:13339]
+51be5000-51c04000 r-xp 00000000 b3:06 395950     /lib/arm-linux-gnueabihf/libpng12.so.0.49.0
+51c04000-51c0b000 ---p 0001f000 b3:06 395950     /lib/arm-linux-gnueabihf/libpng12.so.0.49.0
+51c0b000-51c0c000 r--p 0001e000 b3:06 395950     /lib/arm-linux-gnueabihf/libpng12.so.0.49.0
+51c0c000-51c0d000 rw-p 0001f000 b3:06 395950     /lib/arm-linux-gnueabihf/libpng12.so.0.49.0
+51c0d000-51c21000 r-xp 00000000 b3:06 395957     /lib/arm-linux-gnueabihf/libz.so.1.2.7
+51c21000-51c29000 ---p 00014000 b3:06 395957     /lib/arm-linux-gnueabihf/libz.so.1.2.7
+51c29000-51c2a000 r--p 00014000 b3:06 395957     /lib/arm-linux-gnueabihf/libz.so.1.2.7
+51c2a000-51c2b000 rw-p 00015000 b3:06 395957     /lib/arm-linux-gnueabihf/libz.so.1.2.7
+51c2b000-51ca9000 r-xp 00000000 b3:06 534843     /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.11.1
+51ca9000-51cb0000 ---p 0007e000 b3:06 534843     /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.11.1
+51cb0000-51cb3000 r--p 0007d000 b3:06 534843     /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.11.1
+51cb3000-51cb4000 rw-p 00080000 b3:06 534843     /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.11.1
+51cb7000-51cbc000 r--s 00000000 b3:06 135249     /var/cache/fontconfig/1c2c2997deddd45e0296fa5a60917b7d-le32d8.cache-3
+51cbc000-51cc3000 r--s 00000000 b3:06 135266     /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le32d8.cache-3
+51cc3000-51d03000 r-xp 00000000 b3:06 536417     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libfontmanager.so
+51d03000-51d0a000 ---p 00040000 b3:06 536417     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libfontmanager.so
+51d0a000-51d0c000 rw-p 0003f000 b3:06 536417     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libfontmanager.so
+51d0c000-51d10000 r-xp 00000000 b3:06 534798     /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+51d10000-51d17000 ---p 00004000 b3:06 534798     /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+51d17000-51d18000 rw-p 00003000 b3:06 534798     /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+51d18000-51d1a000 r-xp 00000000 b3:06 534728     /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+51d1a000-51d21000 ---p 00002000 b3:06 534728     /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+51d21000-51d22000 rw-p 00001000 b3:06 534728     /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+51d22000-51d38000 r-xp 00000000 b3:06 534341     /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+51d38000-51d3f000 ---p 00016000 b3:06 534341     /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+51d3f000-51d40000 r--p 00015000 b3:06 534341     /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+51d40000-51d41000 rw-p 00016000 b3:06 534341     /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+51d41000-51d4d000 r-xp 00000000 b3:06 534865     /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+51d4d000-51d54000 ---p 0000c000 b3:06 534865     /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+51d54000-51d55000 rw-p 0000b000 b3:06 534865     /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+51d55000-51d59000 r-xp 00000000 b3:06 533733     /usr/lib/arm-linux-gnueabihf/libXtst.so.6.1.0
+51d59000-51d60000 ---p 00004000 b3:06 533733     /usr/lib/arm-linux-gnueabihf/libXtst.so.6.1.0
+51d60000-51d61000 rw-p 00003000 b3:06 533733     /usr/lib/arm-linux-gnueabihf/libXtst.so.6.1.0
+51d61000-51e6a000 r-xp 00000000 b3:06 535182     /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+51e6a000-51e71000 ---p 00109000 b3:06 535182     /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+51e71000-51e75000 rw-p 00108000 b3:06 535182     /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+51e75000-51e82000 r-xp 00000000 b3:06 534532     /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+51e82000-51e8a000 ---p 0000d000 b3:06 534532     /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+51e8a000-51e8b000 rw-p 0000d000 b3:06 534532     /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+51e8b000-51ecb000 r-xp 00000000 b3:06 536576     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/xawt/libmawt.so
+51ecb000-51ecd000 rw-p 00040000 b3:06 536576     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/xawt/libmawt.so
+51ecd000-51ece000 rw-p 00000000 00:00 0 
+51ece000-51f4e000 r-xp 00000000 b3:06 536433     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libawt.so
+51f4e000-51f55000 ---p 00080000 b3:06 536433     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libawt.so
+51f55000-51f5c000 rw-p 0007f000 b3:06 536433     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libawt.so
+51f5c000-51f80000 rw-p 00000000 00:00 0 
+51f80000-51f83000 ---p 00000000 00:00 0 
+51f83000-52100000 rw-p 00000000 00:00 0          [stack:13335]
+52100000-52200000 rw-p 00000000 00:00 0 
+52201000-52209000 r-xp 00000000 b3:06 534366     /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+52209000-52210000 ---p 00008000 b3:06 534366     /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+52210000-52211000 rw-p 00007000 b3:06 534366     /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+52211000-52239000 rw-p 00000000 00:00 0 
+52239000-5223a000 ---p 00000000 00:00 0 
+5223a000-522d9000 rw-p 00000000 00:00 0          [stack:13337]
+522d9000-522dc000 ---p 00000000 00:00 0 
+522dc000-52459000 rw-p 00000000 00:00 0          [stack:13333]
+52459000-525d0000 r--p 00000000 b3:06 536050     /usr/lib/locale/locale-archive
+525d0000-525d3000 ---p 00000000 00:00 0 
+525d3000-52750000 rw-p 00000000 00:00 0          [stack:13332]
+52750000-52753000 ---p 00000000 00:00 0 
+52753000-528d0000 rw-p 00000000 00:00 0          [stack:13331]
+528d0000-528d1000 ---p 00000000 00:00 0 
+528d1000-529a4000 rw-p 00000000 00:00 0          [stack:13330]
+529a4000-52b3b000 r--s 019e3000 b3:06 536408     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/rt.jar
+52b3b000-52b3f000 rw-p 00000000 00:00 0 
+52b3f000-52b5c000 rw-p 00000000 00:00 0 
+52b5c000-52b61000 rw-p 00000000 00:00 0 
+52b61000-52bf7000 rw-p 00000000 00:00 0 
+52bf7000-52bfa000 rw-p 00000000 00:00 0 
+52bfa000-52c44000 rw-p 00000000 00:00 0 
+52c44000-52c4a000 rw-p 00000000 00:00 0 
+52c4a000-52cdf000 rw-p 00000000 00:00 0 
+52cdf000-52ce3000 rw-p 00000000 00:00 0 
+52ce3000-52cff000 rw-p 00000000 00:00 0 
+52cff000-531c0000 rw-p 00000000 00:00 0 
+531c0000-5c7a0000 rw-p 00000000 00:00 0 
+5c7a0000-5d160000 rw-p 00000000 00:00 0 
+5d160000-6fd00000 rw-p 00000000 00:00 0 
+6fd00000-703c0000 rw-p 00000000 00:00 0 
+703c0000-73d00000 rw-p 00000000 00:00 0 
+73d00000-73d06000 r--s 00000000 b3:06 135253     /var/cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le32d8.cache-3
+73d06000-73d0d000 r--s 00053000 b3:06 536366     /usr/lib/jvm/java-6-openjdk-common/jre/lib/resources.jar
+73d0d000-73d11000 r--s 00017000 b3:06 279999     /home/pi/Downloads/thumbnailator-0.4.8.jar
+73d11000-73d13000 r--s 00001000 b3:06 536373     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/dnsns.jar
+73d13000-73d17000 r--s 00078000 b3:06 536375     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/localedata.jar
+73d17000-73d1b000 r--s 00039000 b3:06 536376     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/sunpkcs11.jar
+73d1b000-73d1c000 rw-p 00000000 00:00 0 
+73d1c000-73d9b000 rw-p 00000000 00:00 0 
+73d9b000-73dc3000 rwxp 00000000 00:00 0 
+73dc3000-75d9b000 rw-p 00000000 00:00 0 
+75d9b000-75da9000 r-xp 00000000 b3:06 536442     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libzip.so
+75da9000-75db0000 ---p 0000e000 b3:06 536442     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libzip.so
+75db0000-75db2000 rw-p 0000d000 b3:06 536442     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libzip.so
+75db2000-75dbc000 r-xp 00000000 b3:06 395984     /lib/arm-linux-gnueabihf/libnss_files-2.13.so
+75dbc000-75dc3000 ---p 0000a000 b3:06 395984     /lib/arm-linux-gnueabihf/libnss_files-2.13.so
+75dc3000-75dc4000 r--p 00009000 b3:06 395984     /lib/arm-linux-gnueabihf/libnss_files-2.13.so
+75dc4000-75dc5000 rw-p 0000a000 b3:06 395984     /lib/arm-linux-gnueabihf/libnss_files-2.13.so
+75dc5000-75dce000 r-xp 00000000 b3:06 395960     /lib/arm-linux-gnueabihf/libnss_nis-2.13.so
+75dce000-75dd5000 ---p 00009000 b3:06 395960     /lib/arm-linux-gnueabihf/libnss_nis-2.13.so
+75dd5000-75dd6000 r--p 00008000 b3:06 395960     /lib/arm-linux-gnueabihf/libnss_nis-2.13.so
+75dd6000-75dd7000 rw-p 00009000 b3:06 395960     /lib/arm-linux-gnueabihf/libnss_nis-2.13.so
+75dd7000-75ddd000 r-xp 00000000 b3:06 395999     /lib/arm-linux-gnueabihf/libnss_compat-2.13.so
+75ddd000-75de4000 ---p 00006000 b3:06 395999     /lib/arm-linux-gnueabihf/libnss_compat-2.13.so
+75de4000-75de5000 r--p 00005000 b3:06 395999     /lib/arm-linux-gnueabihf/libnss_compat-2.13.so
+75de5000-75de6000 rw-p 00006000 b3:06 395999     /lib/arm-linux-gnueabihf/libnss_compat-2.13.so
+75de6000-75df7000 r-xp 00000000 b3:06 396047     /lib/arm-linux-gnueabihf/libnsl-2.13.so
+75df7000-75dfe000 ---p 00011000 b3:06 396047     /lib/arm-linux-gnueabihf/libnsl-2.13.so
+75dfe000-75dff000 r--p 00010000 b3:06 396047     /lib/arm-linux-gnueabihf/libnsl-2.13.so
+75dff000-75e00000 rw-p 00011000 b3:06 396047     /lib/arm-linux-gnueabihf/libnsl-2.13.so
+75e00000-75e02000 rw-p 00000000 00:00 0 
+75e02000-75e26000 r-xp 00000000 b3:06 536448     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libjava.so
+75e26000-75e2e000 ---p 00024000 b3:06 536448     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libjava.so
+75e2e000-75e30000 rw-p 00024000 b3:06 536448     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libjava.so
+75e30000-75e3b000 r-xp 00000000 b3:06 536447     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libverify.so
+75e3b000-75e43000 ---p 0000b000 b3:06 536447     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libverify.so
+75e43000-75e44000 rw-p 0000b000 b3:06 536447     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libverify.so
+75e44000-75e4a000 r-xp 00000000 b3:06 396111     /lib/arm-linux-gnueabihf/librt-2.13.so
+75e4a000-75e51000 ---p 00006000 b3:06 396111     /lib/arm-linux-gnueabihf/librt-2.13.so
+75e51000-75e52000 r--p 00005000 b3:06 396111     /lib/arm-linux-gnueabihf/librt-2.13.so
+75e52000-75e53000 rw-p 00006000 b3:06 396111     /lib/arm-linux-gnueabihf/librt-2.13.so
+75e53000-75e57000 ---p 00000000 00:00 0 
+75e57000-75fd3000 rw-p 00000000 00:00 0          [stack:13329]
+75fd3000-767d3000 rwxp 00000000 00:00 0 
+767d3000-767f3000 r-xp 00000000 b3:06 396136     /lib/arm-linux-gnueabihf/libgcc_s.so.1
+767f3000-767fa000 ---p 00020000 b3:06 396136     /lib/arm-linux-gnueabihf/libgcc_s.so.1
+767fa000-767fb000 rw-p 0001f000 b3:06 396136     /lib/arm-linux-gnueabihf/libgcc_s.so.1
+767fb000-76863000 r-xp 00000000 b3:06 395944     /lib/arm-linux-gnueabihf/libm-2.13.so
+76863000-7686a000 ---p 00068000 b3:06 395944     /lib/arm-linux-gnueabihf/libm-2.13.so
+7686a000-7686b000 r--p 00067000 b3:06 395944     /lib/arm-linux-gnueabihf/libm-2.13.so
+7686b000-7686c000 rw-p 00068000 b3:06 395944     /lib/arm-linux-gnueabihf/libm-2.13.so
+7686c000-7692b000 r-xp 00000000 b3:06 534692     /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.19
+7692b000-76932000 ---p 000bf000 b3:06 534692     /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.19
+76932000-76936000 r--p 000be000 b3:06 534692     /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.19
+76936000-76938000 rw-p 000c2000 b3:06 534692     /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.19
+76938000-7693e000 rw-p 00000000 00:00 0 
+7693e000-76d43000 r-xp 00000000 b3:06 536423     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/server/libjvm.so
+76d43000-76d4b000 ---p 00405000 b3:06 536423     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/server/libjvm.so
+76d4b000-76d6a000 rw-p 00405000 b3:06 536423     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/server/libjvm.so
+76d6a000-76dc5000 rw-p 00000000 00:00 0 
+76dc5000-76ee9000 r-xp 00000000 b3:06 395977     /lib/arm-linux-gnueabihf/libc-2.13.so
+76ee9000-76ef0000 ---p 00124000 b3:06 395977     /lib/arm-linux-gnueabihf/libc-2.13.so
+76ef0000-76ef2000 r--p 00123000 b3:06 395977     /lib/arm-linux-gnueabihf/libc-2.13.so
+76ef2000-76ef3000 rw-p 00125000 b3:06 395977     /lib/arm-linux-gnueabihf/libc-2.13.so
+76ef3000-76ef6000 rw-p 00000000 00:00 0 
+76ef6000-76ef8000 r-xp 00000000 b3:06 396143     /lib/arm-linux-gnueabihf/libdl-2.13.so
+76ef8000-76eff000 ---p 00002000 b3:06 396143     /lib/arm-linux-gnueabihf/libdl-2.13.so
+76eff000-76f00000 r--p 00001000 b3:06 396143     /lib/arm-linux-gnueabihf/libdl-2.13.so
+76f00000-76f01000 rw-p 00002000 b3:06 396143     /lib/arm-linux-gnueabihf/libdl-2.13.so
+76f01000-76f08000 r-xp 00000000 b3:06 536446     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/jli/libjli.so
+76f08000-76f0f000 ---p 00007000 b3:06 536446     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/jli/libjli.so
+76f0f000-76f11000 rw-p 00006000 b3:06 536446     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/jli/libjli.so
+76f11000-76f25000 r-xp 00000000 b3:06 396110     /lib/arm-linux-gnueabihf/libpthread-2.13.so
+76f25000-76f2c000 ---p 00014000 b3:06 396110     /lib/arm-linux-gnueabihf/libpthread-2.13.so
+76f2c000-76f2d000 r--p 00013000 b3:06 396110     /lib/arm-linux-gnueabihf/libpthread-2.13.so
+76f2d000-76f2e000 rw-p 00014000 b3:06 396110     /lib/arm-linux-gnueabihf/libpthread-2.13.so
+76f2e000-76f30000 rw-p 00000000 00:00 0 
+76f31000-76f33000 r--s 0000f000 b3:06 536377     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/pulse-java.jar
+76f33000-76f37000 r--s 00031000 b3:06 536374     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/sunjce_provider.jar
+76f37000-76f3f000 rw-s 00000000 b3:06 280423     /tmp/hsperfdata_pi/13324
+76f3f000-76f41000 r-xp 00000000 b3:06 535266     /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+76f41000-76f48000 ---p 00002000 b3:06 535266     /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+76f48000-76f49000 rw-p 00001000 b3:06 535266     /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+76f49000-76f66000 r-xp 00000000 b3:06 396029     /lib/arm-linux-gnueabihf/ld-2.13.so
+76f66000-76f67000 r--s 00007000 b3:06 673660     /usr/share/java/java-atk-wrapper.jar
+76f67000-76f68000 rw-p 00000000 00:00 0 
+76f68000-76f69000 ---p 00000000 00:00 0 
+76f69000-76f6c000 rw-p 00000000 00:00 0 
+76f6c000-76f6e000 rw-p 00000000 00:00 0 
+76f6e000-76f6f000 r--p 0001d000 b3:06 396029     /lib/arm-linux-gnueabihf/ld-2.13.so
+76f6f000-76f70000 rw-p 0001e000 b3:06 396029     /lib/arm-linux-gnueabihf/ld-2.13.so
+7e7fd000-7e81e000 rw-p 00000000 00:00 0          [stack]
+7ebe5000-7ebe6000 r-xp 00000000 00:00 0          [sigpage]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: Main
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+LD_LIBRARY_PATH=/usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/server:/usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm:/usr/lib/jvm/java-6-openjdk-armhf/jre/../lib/arm
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x3b56e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x3b56e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x2e8d2c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x2e8d2c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x2e8d2c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x2e8d2c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x2e8ef0], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x2e95fc], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x2e95fc], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x2e95fc], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x2e95fc], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:7.8
+
+uname:Linux 3.18.7-v7+ #755 SMP PREEMPT Thu Feb 12 17:20:48 GMT 2015 armv7l
+libc:glibc 2.13 NPTL 2.13 
+rlimit: STACK 8192k, CORE 0k, NPROC 7349, NOFILE 4096, AS infinity
+load average:4.51 3.70 3.32
+
+/proc/meminfo:
+MemTotal:         949328 kB
+MemFree:           53620 kB
+MemAvailable:     295584 kB
+Buffers:           32228 kB
+Cached:           281860 kB
+SwapCached:            4 kB
+Active:           666792 kB
+Inactive:         195220 kB
+Active(anon):     536292 kB
+Inactive(anon):    68008 kB
+Active(file):     130500 kB
+Inactive(file):   127212 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:        102396 kB
+SwapFree:         102392 kB
+Dirty:               184 kB
+Writeback:             0 kB
+AnonPages:        547860 kB
+Mapped:           168836 kB
+Shmem:             56380 kB
+Slab:              17768 kB
+SReclaimable:       9464 kB
+SUnreclaim:         8304 kB
+KernelStack:        2672 kB
+PageTables:         4164 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      577060 kB
+Committed_AS:    1226832 kB
+VmallocTotal:    1105920 kB
+VmallocUsed:        3920 kB
+VmallocChunk:     865016 kB
+
+
+CPU:total 4 
+
+/proc/cpuinfo:
+processor	: 0
+model name	: ARMv7 Processor rev 5 (v7l)
+BogoMIPS	: 57.60
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 5
+
+processor	: 1
+model name	: ARMv7 Processor rev 5 (v7l)
+BogoMIPS	: 57.60
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 5
+
+processor	: 2
+model name	: ARMv7 Processor rev 5 (v7l)
+BogoMIPS	: 57.60
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 5
+
+processor	: 3
+model name	: ARMv7 Processor rev 5 (v7l)
+BogoMIPS	: 57.60
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xc07
+CPU revision	: 5
+
+Hardware	: BCM2709
+Revision	: a01041
+Serial		: 0000000063c1497d
+
+
+Memory: 4k page, physical 949328k(53620k free), swap 102396k(102392k free)
+
+vm_info: OpenJDK Zero VM (23.25-b01) for linux-arm-vfp JRE (1.6.0_34-b34), built on Feb  1 2015 07:15:48 by "root" with gcc 4.7.2
+
+time: Sun Apr 26 19:42:29 2015
+elapsed time: 5 seconds
+
