@@ -21,7 +21,6 @@ public class World implements Serializable {
 		this.width = width;
 		this.height = height;
 		this.save = save;
-
 		this.chunks = chunks;
 
 
@@ -83,6 +82,11 @@ public class World implements Serializable {
 		Thread task = new Thread(new WorldRunnable(name, WorldRunnable.ACTION_LOAD));
 		task.run();
 
+	}
+
+	public static void loadWorld(World world) {
+		Thread task = new Thread(new WorldRunnable(world, WorldRunnable.ACTION_LOAD));
+		task.run();
 	}
 
 	public void setData(String data, int i) {

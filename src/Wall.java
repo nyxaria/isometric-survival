@@ -17,6 +17,8 @@ public class Wall implements Serializable {
 	public static final int ORIENTATION_WEST_NORTH = 3;
 	public static final int ORIENTATION_CENTER = 4;
 	public static final int ORIENTATION_NORTH = 5;
+	public static final int ORIENTATION_FULL = 6;
+
 
 	public Wall(int z, int orientation, String asset) {
 		this.orientation = orientation;
@@ -25,6 +27,9 @@ public class Wall implements Serializable {
 	}
 
 	public BufferedImage getAsset(float opacity) {
+		if(asset.equals(""))
+			return new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+
 		if (!Canvas.tiler.exists(asset)) {
 			Canvas.tiler.add(asset, Main.loadImage(asset));
 		}
@@ -47,31 +52,31 @@ public class Wall implements Serializable {
 		}
 		if (!Canvas.tiler.exists(asset + "_" + opacity + "_" + orientation)) {
 			BufferedImage changed = Canvas.tiler.get(asset + "_" + opacity);
-			float shade = 1f;
-			switch (orientation) {
-			case ORIENTATION_NORTH_EAST:
-			case ORIENTATION_SOUTH_WEST:
-				AffineTransform tx = AffineTransform.getScaleInstance(-1, 1);
-				tx.translate(-changed.getWidth(null), 0);
-				AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
-				changed = op.filter(changed, null);
-				shade = 0.7f;
-				break;
-			case ORIENTATION_EAST_SOUTH:
-			case ORIENTATION_WEST_NORTH:
-				shade = 0.9f;
-				break;
-			}
+//			float shade = 1f;
+//			switch (orientation) {
+//			case ORIENTATION_NORTH_EAST:
+//			case ORIENTATION_SOUTH_WEST:
+//				AffineTransform tx = AffineTransform.getScaleInstance(-1, 1);
+//				tx.translate(-changed.getWidth(null), 0);
+//				AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
+//				changed = op.filter(changed, null);
+//				shade = 0.7f;
+//				break;
+//			case ORIENTATION_EAST_SOUTH:
+//			case ORIENTATION_WEST_NORTH:
+//				shade = 0.9f;
+//				break;
+//			}
+//
+//			float[] scales = new float[] { shade, shade, shade, 1.0f };
+//			float[] offsets = new float[4];
+//			BufferedImage temp = new BufferedImage(changed.getWidth(), changed.getHeight(), changed.getType());
+//			RescaleOp rop = new RescaleOp(scales, offsets, null);
+//			Graphics2D g = temp.createGraphics();
+//			g.drawImage(changed, rop, 0, 0);
 
-			float[] scales = new float[] { shade, shade, shade, 1.0f };
-			float[] offsets = new float[4];
-			BufferedImage temp = new BufferedImage(changed.getWidth(), changed.getHeight(), changed.getType());
-			RescaleOp rop = new RescaleOp(scales, offsets, null);
-			Graphics2D g = temp.createGraphics();
-			g.drawImage(changed, rop, 0, 0);
-
-			Canvas.tiler.add(asset + "_" + opacity + "_" + orientation, temp);
-			return temp;
+			Canvas.tiler.add(asset + "_" + opacity + "_" + orientation, Canvas.tiler.get(asset + "_" + opacity));
+			return Canvas.tiler.get(asset + "_" + opacity);
 		} else {
 			return Canvas.tiler.get(asset + "_" + opacity + "_" + orientation);
 		}

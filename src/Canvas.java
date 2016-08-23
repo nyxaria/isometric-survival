@@ -16,14 +16,14 @@ class Canvas extends JComponent {
     public static int SCREEN_WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width;
     public static int SCREEN_HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height;
 
+
     public static final int TILE_WIDTH = 64;
-    public static final int TILE_HEIGHT = (int) (TILE_WIDTH / (2.0));
-    public static int PIXEL_WIDTH = (WIDTH * TILE_HEIGHT / 2) + (HEIGHT * TILE_HEIGHT / 2);
-    public static int PIXEL_HEIGHT = (HEIGHT * TILE_HEIGHT / 2) - (WIDTH * TILE_HEIGHT / 2);
+    public static final int TILE_HEIGHT = TILE_WIDTH / 2;
     Font mainFont;
 
+    boolean debug = false;
     World world;
-    private boolean inGame;
+    public boolean inGame;
     static TileGraphicsHandler tiler = new TileGraphicsHandler();
     private BufferedImage previousCompleteRenderSheet;
 
@@ -59,11 +59,11 @@ class Canvas extends JComponent {
         return new DPoint(newX, newY);
     }
 
-    // finsish walls camera
-
     int xOff = (int) (SCREEN_WIDTH / 2);
     private boolean hideMouse;
     DPoint focus;
+    long lastpaint = System.currentTimeMillis();
+    long renderTime = 11;
 
     @Override
     public void paintComponent(Graphics g) {
@@ -72,7 +72,11 @@ class Canvas extends JComponent {
         if (inGame && !world.paused) {
             g2.setColor(Color.black);
             g2.fillRect(0, 0, getToolkit().getScreenSize().width, getToolkit().getScreenSize().height);
-            g2.drawImage(getRelevantRenderSheetTo(world.player), 0, 0, null);
+            long start = System.currentTimeMillis();
+            latestRenderTerrain = getRelevantRenderSheetTo(world.player);
+            renderTime = System.currentTimeMillis() - start;
+            g2.drawImage(latestRenderTerrain, 0, 0, null);
+            lastpaint = System.currentTimeMillis();
         } else {
             g.setColor(Color.black);
             g.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -101,6 +105,8 @@ class Canvas extends JComponent {
         //if (Main.ruleset.get(Main.RULE_SCREEN) == Main.RULE_SCREEN_WINDOWED) {
         SCREEN_HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height
                 - Toolkit.getDefaultToolkit().getScreenInsets(Main.frame.getGraphicsConfiguration()).bottom;
+
+        SCREEN_WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width;
         //}
 
         if (!hideMouse) {
@@ -111,7 +117,6 @@ class Canvas extends JComponent {
             g2.setColor(new Color(240, 230, 180, 150));
             g2.draw(poly);
         }
-        boolean debug = true;
         if (debug) {
             //g2.setColor(Color.black);
 
@@ -122,7 +127,11 @@ class Canvas extends JComponent {
             // g2.setFont(g2.getFont().deriveFont(Font.PLAIN).deriveFont(14));
             g2.drawString("fps: " + Main.fps, SCREEN_WIDTH - g2.getFontMetrics().stringWidth("fps: " + Main.fps) - 5,
                     getLabelHeight(g2, "fps: " + Main.fps, g2.getFont()));
+
+            g2.drawLine(0, SCREEN_HEIGHT / 2, SCREEN_WIDTH, SCREEN_HEIGHT / 2);
+            g2.drawLine(SCREEN_WIDTH / 2, 0, SCREEN_WIDTH / 2, SCREEN_HEIGHT);
         }
+
 
     }
 
@@ -138,18 +147,21 @@ class Canvas extends JComponent {
 
 
     public BufferedImage getRelevantRenderSheetTo(Entity e) {
-        return updateCompleteRenderSheet((int) (e.getX()/World.CHUNK_WIDTH), (int) (e.getY()/World.CHUNK_HEIGHT));
+        return updateCompleteRenderSheet((int) (e.getX() / World.CHUNK_WIDTH), (int) (e.getY() / World.CHUNK_HEIGHT));
     }
 
 
     public BufferedImage[][] renderedChunks;
-    int yOffChunk = TILE_HEIGHT / 4;
+    int yOffChunk = TILE_HEIGHT;
+
 
     public void renderChunk(int xx, int yy) {
+        ArrayList<Misc> toDraw = new ArrayList<>();
+        ArrayList<Point> points = new ArrayList<>();
         if (renderedChunks == null) {
             renderedChunks = new BufferedImage[world.height / World.CHUNK_HEIGHT][world.width / World.CHUNK_WIDTH];
         }
-        BufferedImage sheet = new BufferedImage(World.CHUNK_WIDTH * TILE_WIDTH  + xOffWalls, World.CHUNK_HEIGHT * TILE_HEIGHT + yOffChunk, BufferedImage.TYPE_INT_ARGB);
+        BufferedImage sheet = new BufferedImage(World.CHUNK_WIDTH * TILE_WIDTH + xOffWalls, World.CHUNK_HEIGHT * TILE_HEIGHT + yOffChunk, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = sheet.createGraphics();
         for (int y = 0; y < World.CHUNK_HEIGHT; y++) {
             for (int x = 0; x < World.CHUNK_WIDTH; x++) {
@@ -162,20 +174,55 @@ class Canvas extends JComponent {
                         g2.drawImage(Tile.defaultSideTileRight(), cur.x + TILE_WIDTH / 2, cur.y - TILE_HEIGHT / 2 + yOffChunk, null);
                     }
                     cur = isoToScreen(x, y, tile.z);
-                    g2.drawImage(tile.getTopTile(), cur.x + World.CHUNK_WIDTH * TILE_WIDTH / 2, cur.y - (TILE_HEIGHT / 2) + yOffChunk, this);
+                    if (debug) {
+                        if (tile.walls.size() > 0) {
+                            tile.highlight(true);
+                        }
+                    }
+                    g2.drawImage(tile.getTopTile(), cur.x + World.CHUNK_WIDTH * TILE_WIDTH / 2, cur.y - (TILE_HEIGHT / 2) + yOffChunk - (tile.getTopTile().getHeight() - TILE_HEIGHT), this);
+                    for (Misc misc : tile.miscs) {
+                        if (misc.type == Misc.TYPE_TILE) {
+                            if (misc.asset.contains("water")) {
+                               // toDraw.add(misc);
+                                //points.add(new Point(x, y));
+                            } else {
+                                double xOff = -1;
+                                double yOff = -.5;
+                                DPoint p = isoToScreen(x + misc.x + xOff, y + misc.y + yOff, 0);
 
+                                g2.drawImage(misc.image, (int) p.x + World.CHUNK_WIDTH * TILE_WIDTH / 2, (int) p.y - (TILE_HEIGHT / 2) + yOffChunk - (tile.getTopTile().getHeight() - TILE_HEIGHT), null);
+                            }
+                        }
+                    }
+
+                    if (debug) {
+                        g2.drawString(tile.x + ", " + tile.y, TILE_WIDTH / 4 + cur.x + World.CHUNK_WIDTH * TILE_WIDTH / 2, cur.y + yOffChunk - (tile.getTopTile().getHeight() - TILE_HEIGHT * 3 / 2));
+
+                    }
                 }
             }
         }
 
+        for (int i = 0; i < toDraw.size(); i++) {
+
+            double xOff = -1;
+            double yOff = -.5;
+            DPoint p = isoToScreen(points.get(i).x + toDraw.get(i).x + xOff, points.get(i).y + toDraw.get(i).y + yOff, 0);
+            Tile tile = world.chunks[yy][xx].tiles[points.get(i).y][points.get(i).x];
+
+            g2.drawImage(toDraw.get(i).image, (int) p.x + World.CHUNK_WIDTH * TILE_WIDTH / 2, (int) p.y - (TILE_HEIGHT / 2) + yOffChunk - (tile.getTopTile().getHeight() - TILE_HEIGHT), null);
+
+        }
+
+        g2.dispose();
         renderedChunks[yy][xx] = sheet;
         world.chunks[yy][xx].rendered(true);
     }
 
 
     public BufferedImage[][] renderedWalls;
-    public int yOffWalls = TILE_HEIGHT * 3;
-    public int xOffWalls = TILE_WIDTH;
+    public int yOffWalls = TILE_HEIGHT * 6;
+    public int xOffWalls = TILE_WIDTH * 2;
 
     public void renderWalls(int xx, int yy) {
         if (renderedWalls == null) {
@@ -189,8 +236,19 @@ class Canvas extends JComponent {
                 if (world.chunks[yy][xx].isReady()) {
                     Tile tile = world.chunks[yy][xx].tiles[y][x];
                     Point cur;
+                    for (Misc misc : tile.miscs) {
+                        if (misc.type == Misc.TYPE_WALL || misc.asset.contains("water")) {
+                            double xOff = -1;
+                            double yOff = -.5;
+                            DPoint p = isoToScreen(x + misc.x + xOff, y + misc.y + yOff, 0);
+
+                            g2.drawImage(misc.image, (int) p.x + World.CHUNK_WIDTH * TILE_WIDTH / 2, (int) p.y - (TILE_HEIGHT / 2) + yOffChunk - (tile.getTopTile().getHeight() - TILE_HEIGHT) + yOffWalls, null);
+                        }
+                    }
                     for (Wall wall : tile.walls) {
                         cur = isoToScreen(x, y, tile.z + wall.z);
+
+
                         switch (wall.orientation) {
                             case Wall.ORIENTATION_EAST_SOUTH:
                                 g2.drawImage(wall.getDefaultAsset(), cur.x + World.CHUNK_WIDTH * TILE_WIDTH / 2 + TILE_WIDTH / 2, cur.y - TILE_HEIGHT / 2 + yOffWalls
@@ -206,47 +264,92 @@ class Canvas extends JComponent {
                             case Wall.ORIENTATION_NORTH:
                                 boolean drawn = false;
                                 if (!drawn) {
-                                    g2.drawImage(wall.getAsset(1f), cur.x + World.CHUNK_WIDTH * TILE_WIDTH / 2, cur.y + yOffChunk- TILE_HEIGHT/2, this);
+                                    int xOff = 0;
+                                    int yOff = 0;
+                                    if (wall.asset.startsWith("tree_03")) {
+                                        xOff = 6;
+                                    } else if (wall.asset.startsWith("tree_04")) {
+                                        xOff = 4;
+                                    } else if (wall.asset.startsWith("tree_05")) {
+                                        yOff = 5;
+                                    } else if (wall.asset.startsWith("tree_06")) {
+                                        xOff = -3;
+                                        yOff = 5;
+                                    } else if (wall.asset.startsWith("tree_07")) {
+                                        xOff = 4;
+                                    } else if (wall.asset.startsWith("tree_08")) {
+                                        xOff = 3;
+                                    }
+
+                                    g2.drawImage(wall.getAsset(1f), cur.x + World.CHUNK_WIDTH * TILE_WIDTH / 2 + TILE_WIDTH / 2 - wall.getAsset(1f).getWidth() / 2 + xOff, cur.y + wall.getAsset(1f).getHeight() / 2 + TILE_HEIGHT / 2 + yOff, this);
                                 }
                                 break;
+                            case Wall.ORIENTATION_FULL:
+                                g2.drawImage(wall.getAsset(1f), cur.x + World.CHUNK_WIDTH * TILE_WIDTH / 2, cur.y + (int) (wall.getAsset(1f).getHeight() * 4.5), this);
+
                         }
                     }
                 }
             }
         }
 
+        g2.dispose();
         renderedWalls[yy][xx] = sheet;
     }
 
     BufferedImage[][] renderedEntities;
 
-    public void renderEntities(int xx, int yy) {
+    int yOffEntitiesBottom = TILE_HEIGHT * 2;
+    int i = 0;
+
+    int xOffEntitiesLeft = TILE_WIDTH;
+
+    public void renderEntities(int yy, int xx, DPoint oldFocus) {
         if (renderedEntities == null) {
             renderedEntities = new BufferedImage[world.height / World.CHUNK_HEIGHT][world.width / World.CHUNK_WIDTH];
         }
-        BufferedImage sheet = new BufferedImage(World.CHUNK_WIDTH * TILE_WIDTH, World.CHUNK_HEIGHT * TILE_HEIGHT + yOffWalls, BufferedImage.TYPE_INT_ARGB);
+        BufferedImage sheet = new BufferedImage(World.CHUNK_WIDTH * TILE_WIDTH + xOffWalls + xOffEntitiesLeft, World.CHUNK_HEIGHT * TILE_HEIGHT + yOffWalls + yOffEntitiesBottom, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = sheet.createGraphics();
 
         for (int y = 0; y < World.CHUNK_HEIGHT; y++) {
             for (int x = 0; x < World.CHUNK_WIDTH; x++) {
                 if (world.chunks[yy][xx].isReady()) {
+
+
                     for (Entity e : world.entities) {
                         if ((int) e.getY() == xx * World.CHUNK_WIDTH + x) {
                             if ((int) e.getX() == yy * World.CHUNK_HEIGHT + y) {
                                 if (e instanceof Player) {
                                     DPoint cur1 = isoToScreen(x + (e.getY() % 1), y + (e.getX() % 1), e.getZ());
-                                    g2.drawImage(e.getImage(), (int) -cur1.x + (int) (TILE_WIDTH * 1.5) + (TILE_WIDTH - e.getImage().getWidth()) / 2,
-                                            (int) cur1.y - e.getImage().getHeight() + (int) (1.5 * TILE_HEIGHT) + yOffWalls, this);
+                                    int offsetPlayerY = TILE_HEIGHT;
+                                    g2.drawImage(e.getImage(), (int) -cur1.x - (int) (focus.x - oldFocus.x) + xOffEntitiesLeft + TILE_WIDTH * World.CHUNK_WIDTH / 2 - e.getImage().getWidth() / 2, (int) cur1.y - (int) (focus.y - oldFocus.y) + yOffWalls + 13 - e.getImage().getHeight() + offsetPlayerY, this);
                                 }
                             }
+                        }
+
+
+                    }
+                    for (Misc misc : world.chunks[xx][yy].tiles[x][y].miscs) {
+                        if (misc.type == Misc.TYPE_ENTITY) {
+                            double xOff = -1;
+                            double yOff = -.5;
+                            DPoint p = isoToScreen(x + misc.y, y - 1 + misc.x, 0);
+                            //g2.drawImage(misc.image, (int) -p.x + World.CHUNK_WIDTH * TILE_WIDTH / 2, (int) p.y - (TILE_HEIGHT / 2) + yOffChunk - (tile.getTopTile().getHeight() - TILE_HEIGHT), null);
+
+                            g2.drawImage(misc.image, (int) -p.x + TILE_WIDTH * World.CHUNK_WIDTH / 2 + xOffEntitiesLeft, (int) p.y + yOffWalls + TILE_HEIGHT / 2, this);
+
                         }
                     }
                 }
             }
         }
+
+        g2.dispose();
         renderedEntities[yy][xx] = sheet;
     }
 
+    int visibility = 3;
+    long last = System.currentTimeMillis();
 
     public BufferedImage updateCompleteRenderSheet(int xx, int yy) {
 
@@ -255,20 +358,17 @@ class Canvas extends JComponent {
         Graphics2D g2 = tiles.createGraphics();
 
 
-
         BufferedImage wall = new BufferedImage(tiles.getWidth(), tiles.getHeight(), tiles.getType());
         Graphics2D g2w = wall.createGraphics();
         BufferedImage entities = new BufferedImage(tiles.getWidth(), tiles.getHeight(), tiles.getType());
         Graphics2D g2e = entities.createGraphics();
+        DPoint focus = this.focus; //!!!!!!!
 
-        //int yy = (int) world.player.getY() / World.CHUNK_HEIGHT;
-        //int xx = (int) world.player.getX() / World.CHUNK_WIDTH;
-
-        for (int cx = -3; cx <= 3; cx++) {
-            for (int cy = -3; cy <= 3; cy++) {
+        for (int cx = -visibility; cx <= visibility; cx++) {
+            for (int cy = -visibility; cy <= visibility; cy++) {
                 if (yy + cy >= 0 && xx + cx >= 0 && yy + cy < world.height / World.CHUNK_HEIGHT && xx + cx < world.width / World.CHUNK_WIDTH) {
-                    int curyy = yy + cy;
-                    int curxx = xx + cx;
+                    int curyy = xx + cx;
+                    int curxx = yy + cy;
 
                     if (!world.chunks[curxx][curyy].isRendered()) {
                         renderChunk(curyy, curxx);
@@ -276,28 +376,27 @@ class Canvas extends JComponent {
                     }
 
                     if (world.chunks[curyy][curxx].isReady()) {
-                        Point cur = isoToScreen(curxx, curyy, 0);
-                        g2.drawImage(renderedChunks[curxx][curyy], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2) + (TILE_WIDTH / 2)) - focus.x), (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2 - (int) (1.85 * TILE_HEIGHT)) - focus.y), null);
-                        renderEntities(curyy, curxx);
-                        g2w.drawImage(renderedWalls[curxx][curyy], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2) + (TILE_WIDTH / 2)) - focus.x), (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2 - (int) (1.85 * TILE_HEIGHT)) - focus.y - yOffWalls), null);
-                        g2e.drawImage(renderedEntities[curxx][curyy], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2) + (TILE_WIDTH / 2)) - focus.x), (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2 - (int) (1.85 * TILE_HEIGHT)) - focus.y - yOffWalls), null);
+                        Point cur = isoToScreen(curyy, curxx, 0);
+                        g2.drawImage(renderedChunks[curxx][curyy], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2)) - (int) (focus.x + 0.5)), (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2) - TILE_HEIGHT / 2 - (int) (focus.y + 0.5)), null);
+                        g2w.drawImage(renderedWalls[curxx][curyy], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2)) - (int) (focus.x + 0.5)), (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2) - TILE_HEIGHT / 2 - (int) (focus.y + 0.5) - yOffWalls), null);
+                        renderEntities(curyy, curxx, focus);
 
+                        g2e.drawImage(renderedEntities[curyy][curxx], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2)) - (int) (focus.x + 0.5)) - xOffEntitiesLeft, (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2) - TILE_HEIGHT / 2 - (int) (focus.y + 0.5) - yOffWalls), null);
                     }
                 }
             }
         }
 
-
         BufferedImage temp = new BufferedImage(tiles.getWidth(), tiles.getHeight(), tiles.getType()); //double buffer
         Graphics2D tempg = temp.createGraphics();
-        tempg.drawImage(wall,0,0,null);
-        tempg.setComposite(AlphaComposite.Xor);
-        tempg.drawImage(entities,0,0,null);
+        tempg.drawImage(entities, 0, 0, null);
+        tempg.drawImage(wall, 0, 0, null);
         g2.drawImage(temp, 0, 0, null);
         tempg.dispose();
         g2w.dispose();
         g2.dispose();
         latestRenderTerrain = tiles;
+
         return tiles;
     }
 
@@ -311,15 +410,17 @@ class Canvas extends JComponent {
         inGame = false;
     }
 
+    public ArrayList<String> tilesWithWalls;
+
     public void wallBuilt() {
-        ArrayList<Tile> tilesWithWalls = new ArrayList<Tile>();
+        tilesWithWalls = new ArrayList<>();
         for (int yy = 0; yy < world.height / World.CHUNK_HEIGHT; yy++) {
             for (int xx = 0; xx < world.height / World.CHUNK_WIDTH; xx++) {
                 for (int y = 0; y < World.CHUNK_HEIGHT; y++) {
                     for (int x = 0; x < World.CHUNK_WIDTH; x++) {
                         if (world.chunks[yy][xx].isReady()) {
                             if (world.chunks[yy][xx].tiles[y][x].walls.size() > 0) {
-                                tilesWithWalls.add(world.chunks[yy][xx].tiles[y][x]);
+                                tilesWithWalls.add((xx * World.CHUNK_WIDTH + x) + "," + (yy * World.CHUNK_HEIGHT + y));
                             }
                         }
                     }
@@ -331,11 +432,10 @@ class Canvas extends JComponent {
     public void loadWorld(World world) {
         this.world = world;
         world.canvas = this;
-        wallBuilt();
-
-        inGame = true;
         focus = isoToScreen(0.0, 0.0, 0.0);
 
+        inGame = true;
+        wallBuilt();
         initialize();
         //getRelevantRenderSheetTo(world.player);
 
@@ -366,7 +466,6 @@ class Canvas extends JComponent {
 
         }
         focus = isoToScreen(world.camera.getX(), world.camera.getY(), world.camera.getZ());
-        // System.out.println(world.entities.size());
         if (world.entities != null || !world.entities.isEmpty()) {
             for (Entity e : world.entities) {
                 e.update();

@@ -13,7 +13,6 @@ public class Chunk implements Serializable {
 	}
 
 	public void rendered(boolean b) {
-		System.out.println(x + ", " + y + " : " + System.currentTimeMillis());
 		rendered = b;
 	}
 	
@@ -40,6 +39,7 @@ public class Chunk implements Serializable {
 		String toReturn = "<chunk>\n<meta>\n"+x+"\n"+y+"\n/>\n";
 		for(Tile[] ts : tiles) {
 			for(Tile t : ts) {
+				System.out.println(t.toString());
 				toReturn += "<tile>\n"+t.toString()+"\n/>\n";
 			}
 		}

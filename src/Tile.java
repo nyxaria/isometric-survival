@@ -21,6 +21,8 @@ public class Tile implements Serializable {
 	int x, y, z = 1;
 	int realY, realX;
 	ArrayList<String> assets = new ArrayList<String>();
+	ArrayList<Misc> miscs = new ArrayList<Misc>();
+
 	ArrayList<Wall> walls = new ArrayList<Wall>();
 	private boolean highlighted;
 
@@ -32,6 +34,7 @@ public class Tile implements Serializable {
 		for (String s : assets) {
 			if(!s.isEmpty())
 			this.assets.add(s);
+			//System.out.println(s);
 		}
 		renderImages();
 
@@ -78,33 +81,35 @@ public class Tile implements Serializable {
 				// JOptionPane.PLAIN_MESSAGE, null);
 
 			} else if (!Canvas.tiler.exists(asset)) {
-
 				Canvas.tiler.add(asset, Main.loadImage(asset));
-
 			}
 
 		}
 	}
 
 	public BufferedImage getTopTile() {
+		if(assets.size() == 0)
+			return new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
 		if(highlighted) {
-			return defaultTopTile();
+			if (!Canvas.tiler.exists("grass_0_top")) {
+				Canvas.tiler.add("grass_0_top", Main.loadImage("grass_0_top.png"));
+			}
+			return Canvas.tiler.get("grass_0_top");
 		}
+
 		if (!Canvas.tiler.exists(assets.get(0))) {
 			Canvas.tiler.add(assets.get(0), Main.loadImage(assets.get(0)));
 		}
 		if (!Canvas.tiler.exists(assets.get(0) + "_" + z)) {
 			BufferedImage changed = Canvas.tiler.get(assets.get(0));
-//			float shade = 1.0f + (float)(z*0.04);
-//
-//
+//			float shade = .80f - (float)(z*0.04);
 //			float[] scales = new float[] { shade, shade, shade, 1.0f };
 //			float[] offsets = new float[4];
 //			BufferedImage temp = new BufferedImage(changed.getWidth(), changed.getHeight(), changed.getType());
 //			RescaleOp rop = new RescaleOp(scales, offsets, null);
 //			Graphics2D g = temp.createGraphics();
 //			g.drawImage(changed, rop, 0, 0);
-			//changed = temp;
+//			changed = temp;
 			Canvas.tiler.add(assets.get(0) + "_" + z, changed);
 			return changed;
 		} else {
@@ -268,7 +273,6 @@ public class Tile implements Serializable {
 			assets.add(data);
 			break;
 		default: //walls
-			System.out.println(data);
 			if(retain[0] == null) {
 				retain[0] = data;
 			} else if(retain[1] == null) {
@@ -276,7 +280,6 @@ public class Tile implements Serializable {
 			} else if(retain[1] != null) {
 				Wall wall = new Wall(Integer.parseInt(retain[0]), Integer.parseInt(retain[1]), data);
 				walls.add(wall);
-				System.out.println("size: "+walls.size());
 
 				retain[0] = null;
 				retain[1] = null;
@@ -291,4 +294,10 @@ public class Tile implements Serializable {
 		highlighted = b;
 	}
 
-} 
+	public void addMisc(Misc misc) {
+		assets.add(misc.asset);
+		renderImages();
+		misc.image = Canvas.tiler.get(misc.asset);
+		miscs.add(misc);
+	}
+}
