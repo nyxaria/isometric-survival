@@ -4,24 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="950a80a4-70d2-4663-a34b-844e8eb92fc6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Misc.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/isometry/assets/grass_0_top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/isometry/assets/grass_1_top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/isometry/assets/grass_2_top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/isometry/assets/grass_3_top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/isometry/assets/grass_4_top.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isometry/saves/test/meta.txt" afterPath="$PROJECT_DIR$/isometry/saves/test/meta.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isometry/saves/test/tiles.txt" afterPath="$PROJECT_DIR$/isometry/saves/test/tiles.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Canvas.java" afterPath="$PROJECT_DIR$/src/Canvas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chunk.java" afterPath="$PROJECT_DIR$/src/Chunk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.java" afterPath="$PROJECT_DIR$/src/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tile.java" afterPath="$PROJECT_DIR$/src/Tile.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wall.java" afterPath="$PROJECT_DIR$/src/Wall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/World.java" afterPath="$PROJECT_DIR$/src/World.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WorldRunnable.java" afterPath="$PROJECT_DIR$/src/WorldRunnable.java" />
-    </list>
+    <list default="true" id="950a80a4-70d2-4663-a34b-844e8eb92fc6" name="Default" comment="" />
     <ignored path="Isometric.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/bin/" />
