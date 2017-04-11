@@ -313,6 +313,7 @@ public class Main {
                                 yOffTop = +.05;
                                 yOffBottom = -.2;
                             }
+                            if(false) //water bender
                             if (top.equals(water) || top.equals(river)) {
                                 if (bottom.equals(water) || bottom.equals(river)) {
                                     if (right.equals(water) || right.equals(river)) {
@@ -995,7 +996,7 @@ public class Main {
         g2.setColor(river);
 
         for (int i = 0; i < points.size()-1; i++) {
-            g2.drawLine((int) pointsarray[i].getX(), (int) pointsarray[i].getY(), (int) pointsarray[i+1].getX(), (int) pointsarray[i+1].getY());
+            //g2.drawLine((int) pointsarray[i].getX(), (int) pointsarray[i].getY(), (int) pointsarray[i+1].getX(), (int) pointsarray[i+1].getY());
         }
 
         stroke = new BasicStroke(1.0f,

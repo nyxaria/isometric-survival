@@ -1,0 +1,126 @@
+
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(·™õ÷ıÿÿÿÿ
+Msquid:S1213"8Move this variable to comply with Java Code Conventions.(ÄøÀÁ
+g
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(œ ÒÁøÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+g
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(íğ¦«ùÿÿÿÿ
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(½ö·ü
+Ssquid:S1226">Introduce a new variable instead of reusing the parameter "x".(­å’¹
+Rsquid:S1854"8Remove this useless assignment to local variable "xOff".(²ÛÚıÿÿÿÿ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¶”š•
+`squid:S1192"FDefine a constant instead of duplicating this literal "fps: " 3 times.(³‚¶üÿÿÿÿ
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(øø·Çúÿÿÿÿ
+Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(¨ƒ”
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(ùó›Ìøÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(§¢ò
+Msquid:S1213"8Move this variable to comply with Java Code Conventions.(šõ¹ü
+@squid:S1905"&Remove this unnecessary cast to "int".(·™õ÷ıÿÿÿÿ
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(³¨ˆõøÿÿÿÿ
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(·éŸ
+1squid:S1220""Move this file to a named package.
+Xsquid:S1226">Introduce a new variable instead of reusing the parameter "x".(…‹»şÿÿÿÿ
+]squid:HiddenFieldCheck"8Rename "xOff" which hides the field declared at line 54.(²ÛÚıÿÿÿÿ
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(‘“€¶
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ˆø¶ª
+^squid:HiddenFieldCheck"9Rename "focus" which hides the field declared at line 56.(ê€·úÿÿÿÿ
+Š"squid:ClassVariableVisibilityCheck"YMake SCREEN_HEIGHT a static final constant or non-public and provide accessors if needed.(â‰Ô»øÿÿÿÿ
+]squid:HiddenFieldCheck"8Rename "xOff" which hides the field declared at line 54.(Ä…„–üÿÿÿÿ
+N"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(‘†
+Vsquid:HiddenFieldCheck"6Rename "i" which hides the field declared at line 290.(ø»ˆÕ
+Lsquid:S1444"2Make this "public static SCREEN_WIDTH" field final(•Ù¹èûÿÿÿÿ
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ˆø¶ª
+@squid:S1905"&Remove this unnecessary cast to "int".(¹ë¯Äşÿÿÿÿ
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ïíõ•
+‹"squid:ClassVariableVisibilityCheck"ZMake renderedChunks a static final constant or non-public and provide accessors if needed.(Ç·Ê«ÿÿÿÿÿ
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(“à˜ıÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(öæ„ıÿÿÿÿ
+ƒ"squid:ClassVariableVisibilityCheck"RMake inGame a static final constant or non-public and provide accessors if needed.(Ùİàıÿÿÿÿÿ
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(Ç•ì—úÿÿÿÿ
+Msquid:S1213"8Move this variable to comply with Java Code Conventions.(’ÚÅ
+lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 41 to the 15 allowed.(ñ›„ôûÿÿÿÿ
+Xsquid:S1854"7Remove this useless assignment to local variable "g2w".(€¼Éîüÿÿÿÿ8»ƒ“ñµ+
+Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(µÙ«¯ùÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(çÔ°Ïüÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ëï­”üÿÿÿÿ
+Jsquid:S1948"0Make "renderedChunks" transient or serializable.(Ç·Ê«ÿÿÿÿÿ
+squid:S1319"yThe type of the "tilesWithWalls" object should be an interface such as "List" rather than the implementation "ArrayList".(‹™ØÚ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(şÑ–Ç
+Isquid:S1066"/Merge this if statement with the enclosing one.(Ç•ì—úÿÿÿÿ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¯ú„¯
+Csquid:S1066"/Merge this if statement with the enclosing one.(£äŠj
+Š"squid:ClassVariableVisibilityCheck"YMake renderedWalls a static final constant or non-public and provide accessors if needed.(³¨ˆõøÿÿÿÿ
+]squid:HiddenFieldCheck"8Rename "xOff" which hides the field declared at line 54.(²ÛÚıÿÿÿÿ
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(°Şî¡ÿÿÿÿÿ
+Lsquid:S1948"2Make "renderedEntities" transient or serializable.(¢ŠÕÒùÿÿÿÿ
+Xsquid:S1226">Introduce a new variable instead of reusing the parameter "y".(¡¬â²øÿÿÿÿ
+<squid:S1948"'Make "focus" transient or serializable.(ÄøÀÁ
+Csquid:S1481")Remove this unused "xOff" local variable.(²ÛÚıÿÿÿÿ
+Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(ß£®ìşÿÿÿÿ
+Msquid:S1213"8Move this variable to comply with Java Code Conventions.(‹™ØÚ
+Psquid:S2696"6Make the enclosing method "static" or remove this set.(©†Í¨øÿÿÿÿ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(âïÃÁ
+Tsquid:S1068"?Remove this unused "previousCompleteRenderSheet" private field.(ÔÂÆƒ
+Msquid:S1444"3Make this "public static SCREEN_HEIGHT" field final(â‰Ô»øÿÿÿÿ
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(Ç·Ê«ÿÿÿÿÿ
+]squid:HiddenFieldCheck"8Rename "xOff" which hides the field declared at line 54.(²ÛÚıÿÿÿÿ
+Œsquid:S1319"wThe type of the "imagesFading" object should be an interface such as "List" rather than the implementation "ArrayList".(ÊÅàù
+_squid:S2184"ECast one of the operands of this substraction operation to a "float".(õ»Ÿ’øÿÿÿÿ
+qsquid:S3008"WRename this field "SCREEN_WIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Ù¹èûÿÿÿÿ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ğµ¸Ø
+Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(æ’Ãé
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ÉÛÃ‚
+‰"squid:ClassVariableVisibilityCheck"XMake SCREEN_WIDTH a static final constant or non-public and provide accessors if needed.(•Ù¹èûÿÿÿÿ
+†"squid:ClassVariableVisibilityCheck"UMake yOffWalls a static final constant or non-public and provide accessors if needed.(ê€²âûÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(°± 
+bsquid:S1871"MThis branch's code block is the same as the block for the branch on line 258.(ÄóÁç
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(¢ŠÕÒùÿÿÿÿ
+Rsquid:S1854"8Remove this useless assignment to local variable "yOff".(‡˜ Ëıÿÿÿÿ
+†"squid:ClassVariableVisibilityCheck"ZMake tilesWithWalls a static final constant or non-public and provide accessors if needed.(‹™ØÚ
+?squid:S00108")Either remove or fill this block of code.(ş“èö
+Lsquid:S1213"8Move this variable to comply with Java Code Conventions.(çÛ‘E
+„"squid:ClassVariableVisibilityCheck"XMake imagesFading a static final constant or non-public and provide accessors if needed.(ÊÅàù
+g
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(íğ¦«ùÿÿÿÿ
+Ksquid:S2696"6Make the enclosing method "static" or remove this set.(ÌÀø§
+Œ"squid:ClassVariableVisibilityCheck"`Make lowerWallRenderSheet a static final constant or non-public and provide accessors if needed.(’ÚÅ
+4squid:S1659"Declare "y" on a separate line.(ùç—©
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ÙÈ…ûùÿÿÿÿ
+rsquid:S3008"XRename this field "SCREEN_HEIGHT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â‰Ô»øÿÿÿÿ
+Ssquid:S1226">Introduce a new variable instead of reusing the parameter "y".(³ò¼Ú
+Msquid:S1213"8Move this variable to comply with Java Code Conventions.(§¥
+]squid:HiddenFieldCheck"8Rename "xOff" which hides the field declared at line 54.(²ÛÚıÿÿÿÿ
+Msquid:S1213"8Move this variable to comply with Java Code Conventions.(Æ¡Ü£
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(ê€²âûÿÿÿÿ
+"squid:ClassVariableVisibilityCheck"_Make latestRenderTerrain a static final constant or non-public and provide accessors if needed.(°Şî¡ÿÿÿÿÿ
+_squid:S2184"ECast one of the operands of this substraction operation to a "float".(³‚¶üÿÿÿÿ
+Rsquid:S1948"=Make "previousCompleteRenderSheet" transient or serializable.(ÔÂÆƒ
+Isquid:S1481"(Remove this unused "g2w" local variable.(€¼Éîüÿÿÿÿ8»ƒ“ñµ+
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(õ­Ú•şÿÿÿÿ
+Csquid:S1481")Remove this unused "yOff" local variable.(‡˜ Ëıÿÿÿÿ
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(…ËÛĞùÿÿÿÿ
+g
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(‰ùÕ–ıÿÿÿÿ
+Dsquid:S1481"(Remove this unused "g2e" local variable.(¢î¢®8Ô‰‘ñµ+
+Isquid:S1066"/Merge this if statement with the enclosing one.(ÙÈ…ûùÿÿÿÿ
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(ƒñ®şÿÿÿÿ
+Msquid:S1213"8Move this variable to comply with Java Code Conventions.(æŒ§à
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ºìö„úÿÿÿÿ
+Osquid:S1948"5Make "latestRenderTerrain" transient or serializable.(°Şî¡ÿÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Å¡ûÿÿÿÿ
+lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 44 to the 15 allowed.(ò•Úµùÿÿÿÿ
+Isquid:S1066"/Merge this if statement with the enclosing one.(§ú™ãúÿÿÿÿ
+†"squid:ClassVariableVisibilityCheck"UMake xOffWalls a static final constant or non-public and provide accessors if needed.(“à˜ıÿÿÿÿ
+Ksquid:S1948"6Make "lowerWallRenderSheet" transient or serializable.(’ÚÅ
+Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(“âøÿÿÿÿ
+„squid:S1151"jReduce this switch case number of lines from 21 to at most 5, for example by extracting code into methods.(ËÍÚŸüÿÿÿÿ
+Isquid:S1948"/Make "renderedWalls" transient or serializable.(³¨ˆõøÿÿÿÿ
+Ssquid:S1854"7Remove this useless assignment to local variable "g2e".(¢î¢®8Ô‰‘ñµ+

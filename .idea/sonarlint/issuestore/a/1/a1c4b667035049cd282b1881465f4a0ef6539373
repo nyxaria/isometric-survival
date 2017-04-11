@@ -1,0 +1,7 @@
+
+‚"squid:ClassVariableVisibilityCheck"QMake asset a static final constant or non-public and provide accessors if needed.(éÍˆ¹úÿÿÿÿ
+‚"squid:ClassVariableVisibilityCheck"QMake drawn a static final constant or non-public and provide accessors if needed.(ÖÔ¸´øÿÿÿÿ
+1squid:S1220""Move this file to a named package.
+ksquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É›½=
+}"squid:ClassVariableVisibilityCheck"QMake image a static final constant or non-public and provide accessors if needed.(“×ªé
+<squid:S1948"'Make "image" transient or serializable.(“×ªé
