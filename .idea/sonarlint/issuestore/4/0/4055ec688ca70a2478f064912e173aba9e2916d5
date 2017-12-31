@@ -1,39 +1,39 @@
 
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(’ãúÿÿÿÿ
-Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(ıê©
-squid:S1151"jReduce this switch case number of lines from 10 to at most 5, for example by extracting code into methods.(®ùÍÜ
-Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(Óâ±À
-1squid:S1643"Use a StringBuilder instead.(Ï¥É÷
-Msquid:S1197"8Move the array designator from the variable to the type.(¹÷ Ú
-jsquid:S1192"VDefine a constant instead of duplicating this literal "defaultSideBottomLeft" 3 times.(°ñ€*
-ƒsquid:S1151"iReduce this switch case number of lines from 9 to at most 5, for example by extracting code into methods.(­ä¿áüÿÿÿÿ
-lsquid:S1192"WDefine a constant instead of duplicating this literal "defaultSideBottomRight" 3 times.(ê„œ–
-`squid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(Ñ‘®—
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İ¾¼ÿ
-Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(ÅõÿÂşÿÿÿÿ
-N"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(Ñ‘®—
-Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ï¹ûÿÿÿÿ
-9squid:S1659"Declare "z" on a separate line.(Ñ¼‹™úÿÿÿÿ
-ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÉöÛŞøÿÿÿÿ
-4squid:S1659"Declare "y" on a separate line.(äÛÁ”
-`squid:S1192"KDefine a constant instead of duplicating this literal "defaultTop" 3 times.(˜Íó
-asquid:S1871"LThis branch's code block is the same as the block for the branch on line 69.(–éÁ±
-1squid:S1220""Move this file to a named package.
-ƒsquid:S1151"iReduce this switch case number of lines from 9 to at most 5, for example by extracting code into methods.(ªÏ¬Ÿùÿÿÿÿ
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(¹÷ Ú
-Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(ÿ‰Èÿÿÿÿÿ
-Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(İ‡Ùö
-9squid:S1659"Declare "y" on a separate line.(Ñ¼‹™úÿÿÿÿ
-nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ï±ãş
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¿‹±òıÿÿÿÿ
-6squid:S1643"Use a StringBuilder instead.(í‰Ôúÿÿÿÿ
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ò…õm
 Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(¢Èê˜üÿÿÿÿ
-nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ü´Á
 `squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(•Å·
-fsquid:S1192"LDefine a constant instead of duplicating this literal "grass_0_top" 3 times.(´Ë×Óøÿÿÿÿ
 Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(€ÊâÂûÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(”­ÀËıÿÿÿÿ
+ƒsquid:S1151"iReduce this switch case number of lines from 9 to at most 5, for example by extracting code into methods.(­ä¿áüÿÿÿÿ
+1squid:S1643"Use a StringBuilder instead.(Ï¥É÷
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(’ãúÿÿÿÿ
+Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(ÿ‰Èÿÿÿÿÿ
+4squid:S1659"Declare "y" on a separate line.(äÛÁ”
+Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(İ‡Ùö
 8squid:S1659"#Declare "realX" on a separate line.(Ğ­ÜØ
-Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(ıê©
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¿‹±òıÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(”­ÀËıÿÿÿÿ
+1squid:S1220""Move this file to a named package.
+Xsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(ï¹ûÿÿÿÿ
+lsquid:S1192"WDefine a constant instead of duplicating this literal "defaultSideBottomRight" 3 times.(ê„œ–
+9squid:S1659"Declare "y" on a separate line.(Ñ¼‹™úÿÿÿÿ
+Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(Óâ±À
+Msquid:S1197"8Move the array designator from the variable to the type.(¹÷ Ú
+fsquid:S1192"LDefine a constant instead of duplicating this literal "grass_0_top" 3 times.(´Ë×Óøÿÿÿÿ
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ï±ãş
+nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ü´Á
+9squid:S1659"Declare "z" on a separate line.(Ñ¼‹™úÿÿÿÿ
+`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İ¾¼ÿ
+asquid:S1871"LThis branch's code block is the same as the block for the branch on line 69.(–éÁ±
+6squid:S1643"Use a StringBuilder instead.(í‰Ôúÿÿÿÿ
+N"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(Ñ‘®—
+Msquid:S1213"8Move this variable to comply with Java Code Conventions.(¹÷ Ú
+_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ò…õm
+jsquid:S1192"VDefine a constant instead of duplicating this literal "defaultSideBottomLeft" 3 times.(°ñ€*
+ƒsquid:S1151"iReduce this switch case number of lines from 9 to at most 5, for example by extracting code into methods.(ªÏ¬Ÿùÿÿÿÿ
+`squid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(Ñ‘®—
+squid:S1151"jReduce this switch case number of lines from 10 to at most 5, for example by extracting code into methods.(®ùÍÜ
 `squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ì¶ª”
+ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÉöÛŞøÿÿÿÿ
+Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(ıê©
+`squid:S1192"KDefine a constant instead of duplicating this literal "defaultTop" 3 times.(˜Íó
+Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(ÅõÿÂşÿÿÿÿ
+Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(ıê©

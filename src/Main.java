@@ -1,28 +1,14 @@
+import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Path2D;
 import java.awt.geom.PathIterator;
 import java.awt.image.BufferedImage;
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-
+import java.io.*;
 import java.util.*;
 import java.util.List;
-
-import javax.imageio.ImageIO;
-import javax.swing.*;
 
 public class Main {
     public static int WIDTH;
@@ -162,7 +148,7 @@ public class Main {
         Thread loop = new Thread(new Runnable() {
             public void run() {
                 // Main.loadingBars.get(0).percentage++;
-                int TICKS_PER_SECOND = 80;
+                int TICKS_PER_SECOND = 100;
                 int SKIP_TICKS = 1000 / TICKS_PER_SECOND;
                 int MAX_FRAMESKIP = 10;
                 long start = System.currentTimeMillis();
@@ -213,11 +199,11 @@ public class Main {
         Chunk[][] chunks = new Chunk[height / World.CHUNK_HEIGHT][width / World.CHUNK_WIDTH];
 
         BufferedImage biomeMap = createBiomeMap(width, height);
-        JDialog dialog = new JDialog();
-        JLabel label = new JLabel(new ImageIcon(biomeMap));
-        dialog.add(label);
-        dialog.pack();
-        dialog.setVisible(true);
+//        JDialog dialog = new JDialog();
+//        JLabel label = new JLabel(new ImageIcon(biomeMap));
+//        dialog.add(label);
+//        dialog.pack();
+//        dialog.setVisible(true);
         //Raster ras = biomeMap.getData();
 
         // DataBuffer data = ras.getDataBuffer();

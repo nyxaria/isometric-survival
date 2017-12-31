@@ -13,7 +13,7 @@ class Canvas extends JComponent {
     public static final int TILE_HEIGHT = TILE_WIDTH / 2;
     Font mainFont;
 
-    boolean debug = false;
+    boolean debug =false;
     World world;
     public boolean inGame;
     static TileGraphicsHandler tiler = new TileGraphicsHandler();
@@ -23,7 +23,7 @@ class Canvas extends JComponent {
 
     public Canvas() {
         // setPreferredSize(new Dimension(PIXEL_WIDTH, PIXEL_HEIGHT));
-
+        setDoubleBuffered(true);
     }
 
     public Point screenToIso(int x, int y, int z) {
@@ -55,20 +55,30 @@ class Canvas extends JComponent {
     private boolean hideMouse;
     DPoint focus;
     long lastpaint = System.currentTimeMillis();
-    long renderTime = 11;
-
+    int frameCount = 0;
+    int fps;
     @Override
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
+        g2.setRenderingHint(RenderingHints.KEY_COLOR_RENDERING, RenderingHints.VALUE_COLOR_RENDER_SPEED);
+        g2.setRenderingHint(RenderingHints.KEY_ALPHA_INTERPOLATION, RenderingHints.VALUE_ALPHA_INTERPOLATION_SPEED);
+        g2.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_SPEED);
+
 
         if (inGame && !world.paused) {
             g2.setColor(Color.black);
             g2.fillRect(0, 0, getToolkit().getScreenSize().width, getToolkit().getScreenSize().height);
             long start = System.currentTimeMillis();
             latestRenderTerrain = getRelevantRenderSheetTo(world.player);
-            renderTime = System.currentTimeMillis() - start;
             g2.drawImage(latestRenderTerrain, 0, 0, null);
-            lastpaint = System.currentTimeMillis();
+//            if(System.currentTimeMillis() - lastpaint >= 1000) {
+//                lastpaint = System.currentTimeMillis();
+//                fps = frameCount;
+//                frameCount = 0;
+//            } else {
+//                frameCount++;
+//            }
+
         } else {
             g.setColor(Color.black);
             g.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -117,12 +127,11 @@ class Canvas extends JComponent {
             //
             g2.setColor(Color.red);
             // g2.setFont(g2.getFont().deriveFont(Font.PLAIN).deriveFont(14));
-            g2.drawString("fps: " + Main.fps, SCREEN_WIDTH - g2.getFontMetrics().stringWidth("fps: " + Main.fps) - 5,
-                    getLabelHeight(g2, "fps: " + Main.fps, g2.getFont()));
 
-            g2.drawLine(0, SCREEN_HEIGHT / 2, SCREEN_WIDTH, SCREEN_HEIGHT / 2);
-            g2.drawLine(SCREEN_WIDTH / 2, 0, SCREEN_WIDTH / 2, SCREEN_HEIGHT);
         }
+
+        g2.drawString("fps: " + fps, SCREEN_WIDTH - 42 - 5,
+                14);
 
 
     }
@@ -335,7 +344,8 @@ class Canvas extends JComponent {
         renderedEntities[yy][xx] = sheet;
     }
 
-    int visibility = 2;
+    //add loading of surrounding patches
+    int visibility = 4;
     long last = System.currentTimeMillis();
 
     public BufferedImage updateCompleteRenderSheet(int xx, int yy) {

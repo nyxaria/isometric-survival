@@ -1,45 +1,45 @@
 
-\squid:S1132"GMove the "!" string literal on the left side of this string comparison.(Ë—òŠ
-[squid:S1132"FMove the "" string literal on the left side of this string comparison.(Øİ‘•
-bsquid:S1132"HMove the "/>" string literal on the left side of this string comparison.(‹Ñœüÿÿÿÿ
-fsquid:S1132"LMove the "<meta>" string literal on the left side of this string comparison.(¨¡ÜÚıÿÿÿÿ
-8squid:S1148"#Use a logger to log this exception.(Ç’Çê
-`squid:S1132"FMove the "" string literal on the left side of this string comparison.(‹Ñœüÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İûã”úÿÿÿÿ
-gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 63 to the 15 allowed.(ğ‚Î˜
-:squid:S1166"%Either log or rethrow this exception.(Ãôş•
-b
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(à¿ç™
-Dsquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
-`squid:S1132"FMove the "" string literal on the left side of this string comparison.(¢Ô¹¼úÿÿÿÿ
-?squid:S00108")Either remove or fill this block of code.(ï­£Ä
-`squid:S1132"FMove the "" string literal on the left side of this string comparison.(Ì´«Èıÿÿÿÿ
-1squid:S1220""Move this file to a named package.
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¶¨Ùûÿÿÿÿ
-Osquid:S1161":Add the "@Override" annotation above this method signature(“–ış
-csquid:S1132"NMove the "<player>" string literal on the left side of this string comparison.(à¿ç™
-:squid:S1166"%Either log or rethrow this exception.(”ı¾
-:squid:S1166"%Either log or rethrow this exception.(ï­£Ä
 `squid:S1132"FMove the "" string literal on the left side of this string comparison.(Æúæùÿÿÿÿ
-`squid:S1132"FMove the "" string literal on the left side of this string comparison.(‹Ñœüÿÿÿÿ
-^squid:HiddenFieldCheck"9Rename "world" which hides the field declared at line 16.(æıĞûşÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İ…ùûÿÿÿÿ
-ƒ"squid:ClassVariableVisibilityCheck"RMake action a static final constant or non-public and provide accessors if needed.(üÂÁ°ÿÿÿÿÿ
-`squid:S1132"FMove the "" string literal on the left side of this string comparison.(§®†­úÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İûã”úÿÿÿÿ
 `squid:S1132"FMove the "" string literal on the left side of this string comparison.(Æúæùÿÿÿÿ
 ]squid:S1132"HMove the "/>" string literal on the left side of this string comparison.(Ü¸ 
-fsquid:S1132"LMove the "<tile>" string literal on the left side of this string comparison.(ğ²Ê«úÿÿÿÿ
 `squid:S1132"FMove the "" string literal on the left side of this string comparison.(Æúæùÿÿÿÿ
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-[squid:S2259"ANullPointerException might be thrown as 'writer' is nullable here(ÄËªŸÿÿÿÿÿ
-8squid:S2095"Close this "FileOutputStream".(İõıÿÿÿÿÿ
-bsquid:S1132"HMove the "/>" string literal on the left side of this string comparison.(‹Ñœüÿÿÿÿ
-]squid:S1132"HMove the "/>" string literal on the left side of this string comparison.(ªˆ¶¹
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡öç°ÿÿÿÿÿ
-Zsquid:S1192"FDefine a constant instead of duplicating this literal "utf-8" 3 times.(Çáa
+\squid:S1132"GMove the "!" string literal on the left side of this string comparison.(Ë—òŠ
 esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İ…ùûÿÿÿÿ
-8squid:S2095"Close this "FileOutputStream".(îÈ€ãüÿÿÿÿ
-bsquid:S1132"HMove the "/>" string literal on the left side of this string comparison.(Ì´«Èıÿÿÿÿ
-Msquid:S1197"8Move the array designator from the variable to the type.(“ éæ
+`squid:S1132"FMove the "" string literal on the left side of this string comparison.(‹Ñœüÿÿÿÿ
+1squid:S1220""Move this file to a named package.
 b
 squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(Ë—òŠ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡öç°ÿÿÿÿÿ
+bsquid:S1132"HMove the "/>" string literal on the left side of this string comparison.(Ì´«Èıÿÿÿÿ
+csquid:S1132"NMove the "<player>" string literal on the left side of this string comparison.(à¿ç™
+]squid:S1132"HMove the "/>" string literal on the left side of this string comparison.(ªˆ¶¹
+[squid:S2259"ANullPointerException might be thrown as 'writer' is nullable here(ÄËªŸÿÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(Ãôş•
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(İ…ùûÿÿÿÿ
+8squid:S1148"#Use a logger to log this exception.(Ç’Çê
+8squid:S2095"Close this "FileOutputStream".(İõıÿÿÿÿÿ
+[squid:S1132"FMove the "" string literal on the left side of this string comparison.(Øİ‘•
+:squid:S1166"%Either log or rethrow this exception.(”ı¾
+Dsquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+^squid:HiddenFieldCheck"9Rename "world" which hides the field declared at line 16.(æıĞûşÿÿÿÿ
+b
+squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(à¿ç™
+8squid:S2095"Close this "FileOutputStream".(îÈ€ãüÿÿÿÿ
+bsquid:S1132"HMove the "/>" string literal on the left side of this string comparison.(‹Ñœüÿÿÿÿ
+:squid:S1166"%Either log or rethrow this exception.(ï­£Ä
+`squid:S1132"FMove the "" string literal on the left side of this string comparison.(Ì´«Èıÿÿÿÿ
+=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+Msquid:S1197"8Move the array designator from the variable to the type.(“ éæ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 63 to the 15 allowed.(ğ‚Î˜
+`squid:S1132"FMove the "" string literal on the left side of this string comparison.(§®†­úÿÿÿÿ
+fsquid:S1132"LMove the "<tile>" string literal on the left side of this string comparison.(ğ²Ê«úÿÿÿÿ
+?squid:S00108")Either remove or fill this block of code.(ï­£Ä
+fsquid:S1132"LMove the "<meta>" string literal on the left side of this string comparison.(¨¡ÜÚıÿÿÿÿ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¶¨Ùûÿÿÿÿ
+`squid:S1132"FMove the "" string literal on the left side of this string comparison.(‹Ñœüÿÿÿÿ
+Zsquid:S1192"FDefine a constant instead of duplicating this literal "utf-8" 3 times.(Çáa
+bsquid:S1132"HMove the "/>" string literal on the left side of this string comparison.(‹Ñœüÿÿÿÿ
+ƒ"squid:ClassVariableVisibilityCheck"RMake action a static final constant or non-public and provide accessors if needed.(üÂÁ°ÿÿÿÿÿ
+`squid:S1132"FMove the "" string literal on the left side of this string comparison.(¢Ô¹¼úÿÿÿÿ
+Osquid:S1161":Add the "@Override" annotation above this method signature(“–ış
