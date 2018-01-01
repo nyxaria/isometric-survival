@@ -1,5 +1,5 @@
 # isometric-survival
-This project is an attempt to create a game in Java only using the native libraries avaiable. It is heavily inspired by Project Zomboid and is a great challange for me in seeing how far I can take vanilla Java and create a game which runs smoothly and efficently.
+During the Summer of 2015, I set out to create a game using only vanilla Java. It is heavily inspired by Project Zomboid and was a great challange to me see how far I could take vanilla Java in creating a game that runs smoothly and efficently.
 <br>
 
 <br>
