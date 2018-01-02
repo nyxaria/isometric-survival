@@ -3,4 +3,4 @@ During the Summer of 2015, I set out to create a game using only vanilla Java. I
 <br>
 
 <br>
-<p align="center"><img src="/isometry/assets/isogif.gif" width="500px"></p>
+<p align="center"><img src="/isometry/assets/isogif.gif"></p>
