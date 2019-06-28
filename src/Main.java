@@ -26,8 +26,8 @@ public class Main {
 
     static ArrayList<String> rulelist = new ArrayList<String>();
 
-    private static final String ROOT_FOLDER = "isometry";
-    public static final String ROOT = "isometry";
+    private static final String ROOT = "/home/hartt/src/isometric-survival/isometry";
+//    public static final String ROOT = "isometry";
     public static final String RULES = ROOT + "/rules";
     public static final String ASSETS = ROOT + "/assets";
     public static final String BIN = ROOT + "/bin";
@@ -156,7 +156,7 @@ public class Main {
                 int count = 0;
                 int loops;
 
-                boolean game_is_running = true;
+                boolean game_is_running = true; // change this in the future for pause func ? or tabbed out
                 while (game_is_running) {
 
                     loops = 0;
@@ -1058,7 +1058,7 @@ public class Main {
                 new
                         JFileChooser().getFileSystemView().getDefaultDirectory().toString
                         () + "/"
-                        + ROOT_FOLDER;
+                        + ROOT;
     }
 
     public static void updateRules() throws IOException {
@@ -1176,6 +1176,7 @@ public class Main {
 
     public static BufferedImage loadImage(String asset) {
         BufferedImage img = null;
+        System.out.println(ASSETS + "/" + asset);
         try {
             img = ImageIO.read(new File(ASSETS + "/" + asset));
         } catch (IOException e) {

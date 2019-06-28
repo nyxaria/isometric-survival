@@ -1,15 +1,0 @@
-
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Šù”
-1squid:S1220""Move this file to a named package.
-~"squid:ClassVariableVisibilityCheck"MMake z a static final constant or non-public and provide accessors if needed.(äÛ”øÿÿÿÿ
-Fsquid:S1481",Remove this unused "changed" local variable.(–¦ÆÓüÿÿÿÿ
-Ksquid:S1854"7Remove this useless assignment to local variable "old".(˜Áí
-S"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.( ‘ýÙÿÿÿÿÿ
-Usquid:S1854";Remove this useless assignment to local variable "changed".(–¦ÆÓüÿÿÿÿ
-Rsquid:S1244"=Equality tests should not be made with floating point values.(ûî‰¸
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(áÈ¸¯
-ƒ"squid:ClassVariableVisibilityCheck"WMake orientation a static final constant or non-public and provide accessors if needed.(ÐÒÚ 
-Zsquid:S1132"FMove the "" string literal on the left side of this string comparison.(§ùÍX
-~squid:S1151"iReduce this switch case number of lines from 6 to at most 5, for example by extracting code into methods.(ìÅè
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(íÆÕþ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ªšÂÙ

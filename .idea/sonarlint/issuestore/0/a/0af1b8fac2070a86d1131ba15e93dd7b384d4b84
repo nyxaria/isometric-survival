@@ -1,47 +1,0 @@
-
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(í√çº
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(´íË–¯ˇˇˇˇ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(üÈﬁ
-Ö"squid:ClassVariableVisibilityCheck"YMake movementSpeed a static final constant or non-public and provide accessors if needed.(¬¢¢≈
-lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(≥®ó·¸ˇˇˇˇ
-<squid:S1659"'Declare "newChunkX" on a separate line.(’Œ˝É
-^squid:S1871"IThis case's code block is the same as the block for the case on line 200.(—äç›
-b
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(¸–∂…
-b
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(…¶–å
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(∞›£ƒ
-g
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(‘“Íº˚ˇˇˇˇ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‰„Î”˚ˇˇˇˇ
-csquid:S1871"IThis case's code block is the same as the block for the case on line 200.(üÒØ…˘ˇˇˇˇ
-lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 42 to the 15 allowed.(ªÃé»˛ˇˇˇˇ
-N"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ëçÜç
-Å"squid:ClassVariableVisibilityCheck"UMake newChunkX a static final constant or non-public and provide accessors if needed.(’Œ˝É
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ÿ‘≈ÿ
-Rsquid:S1213"8Move this variable to comply with Java Code Conventions.(£¯∂§˚ˇˇˇˇ
-<squid:S1659"'Declare "newChunkY" on a separate line.(’Œ˝É
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(’Œ˝É
-csquid:S1871"IThis case's code block is the same as the block for the case on line 200.(µ°˝Æ˛ˇˇˇˇ
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(’Œ˝É
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(’Œ˝É
-<squid:S1659"'Declare "oldChunkY" on a separate line.(’Œ˝É
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Á˘∞w
-b
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(¢—çç
-g
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(˙ÙéÑˇˇˇˇˇ
-1squid:S1220""Move this file to a named package.
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨≈„°
-g
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(ß¬€¢ˇˇˇˇˇ
-Å"squid:ClassVariableVisibilityCheck"UMake oldChunkX a static final constant or non-public and provide accessors if needed.(’Œ˝É
-Å"squid:ClassVariableVisibilityCheck"UMake oldChunkY a static final constant or non-public and provide accessors if needed.(’Œ˝É
-Å"squid:ClassVariableVisibilityCheck"UMake newChunkY a static final constant or non-public and provide accessors if needed.(’Œ˝É
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(∫–ŸÚ
-Vsquid:HiddenFieldCheck"6Rename "set" which hides the field declared at line 7.(»‰éÍ
-g
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(öæµ ˚ˇˇˇˇ
-S"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(˝ ë†¯ˇˇˇˇ
-Msquid:S1213"8Move this variable to comply with Java Code Conventions.(’Œ˝É
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ç∞Ä

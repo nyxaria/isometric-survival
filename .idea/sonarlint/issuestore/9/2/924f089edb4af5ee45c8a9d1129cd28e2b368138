@@ -1,254 +1,0 @@
-
-bsquid:S1192"MDefine a constant instead of duplicating this literal "water_21.png" 4 times.(õÁôÒ
-€"squid:ClassVariableVisibilityCheck"TMake keysDown a static final constant or non-public and provide accessors if needed.(”™Ìí
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ç—¬Ñ
-b
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(·éŸ
-:squid:S1166"%Either log or rethrow this exception.(³äå“
-Qsquid:S1481"0Remove this unused "pointsarray" local variable.(‚Ì¼ûÿÿÿÿ8±Şığµ+
-7squid:S2386"Make this member "protected".(µ×Öùÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(©ÁÃùÿÿÿÿ
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ÿşï;
-Osquid:S1854":Remove this useless assignment to local variable "random".(¦¼˜ò
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¯·–Òùÿÿÿÿ
-Lsquid:S1135"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
-gsquid:S3776"SRefactor this method to reduce its Cognitive Complexity from 561 to the 15 allowed.(ú¡­,
-lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ÄÃ‡
-ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(È…¿Ïüÿÿÿÿ
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(îÕ¸´
-ssquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(µ×Öùÿÿÿÿ
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ø¡ôf
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(”ÚÖ¾
-^squid:S1192"IDefine a constant instead of duplicating this literal "_top.png" 7 times.(æëÓİ
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(¶Üæİ
-usquid:S1217"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(Ùà¥ç
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(³Ï¹
-9squid:S1659"$Declare "forest" on a separate line.(œÄøà
-`squid:S2184"FCast one of the operands of this substraction operation to a "double".(ş¿¥«úÿÿÿÿ
-qsquid:S1188"\Reduce this anonymous class number of lines from 28 to at most 20, or make it a named class.(¤¡”Ê
-{"squid:ClassVariableVisibilityCheck"OMake fps a static final constant or non-public and provide accessors if needed.(Ûì€£
-=squid:S2140")Use "java.util.Random.nextInt()" instead.(ò•Ê!
-hsquid:S1192"SDefine a constant instead of duplicating this literal "misc_desertgrass_0" 3 times.(Şø µ
-Asquid:S1444",Make this "public static HEIGHT" field final(‡˜ÓÀ
-?squid:S1166"%Either log or rethrow this exception.(ÿëÛßúÿÿÿÿ
--squid:S2095"Close this "FileReader".(²Â›¼
-Msquid:S1854"8Remove this useless assignment to local variable "yBot".(Éîô²
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-ƒsquid:S1151"iReduce this switch case number of lines from 9 to at most 5, for example by extracting code into methods.(úâúÿÿÿÿ
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-?squid:S1659"#Declare "river" on a separate line.(œÄøà8…àùğµ+
-qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œœ€ğøÿÿÿÿ
-`squid:S2184"FCast one of the operands of this substraction operation to a "double".(ÀØšôÿÿÿÿÿ
-\squid:S2184"GCast one of the operands of this multiplication operation to a "float".(ÿ¯©ª
-qsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³³¼ÿÿÿÿÿ
-~"squid:ClassVariableVisibilityCheck"RMake meadow a static final constant or non-public and provide accessors if needed.(œÄøà
-esquid:S3008"PRename this field "WIDTH" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚Ó€
-nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÄÚò“
-~"squid:ClassVariableVisibilityCheck"RMake canvas a static final constant or non-public and provide accessors if needed.(á³ú‹
-~"squid:ClassVariableVisibilityCheck"RMake HEIGHT a static final constant or non-public and provide accessors if needed.(‡˜ÓÀ
-`squid:S2147"FCombine this catch with the one at line 1102, which has the same body.(ÿëÛßúÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(”ÁÏ
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(¦ĞşŞ
-„squid:S1319"oThe type of the "ruleset" object should be an interface such as "Map" rather than the implementation "HashMap".(ÄÚò“
-1squid:S1220""Move this file to a named package.
-‰squid:S2681"oOnly the first line of this 3-line block will be executed conditionally. The rest will execute unconditionally.(™ÿ­ıüÿÿÿÿ
-"squid:ClassVariableVisibilityCheck"bMake transition_sand_meadow a static final constant or non-public and provide accessors if needed.(ûÌªŒ
-@squid:S1444"+Make this "public static WIDTH" field final(‚Ó€
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(¨Š…¼ûÿÿÿÿ
-bsquid:S1192"MDefine a constant instead of duplicating this literal "misc_grass_0" 7 times.(æëÓİ
-ƒsquid:S1151"iReduce this switch case number of lines from 6 to at most 5, for example by extracting code into methods.(ªëÅŞúÿÿÿÿ
-`squid:S2147"FCombine this catch with the one at line 1102, which has the same body.(¥¨›ıÿÿÿÿ
-8squid:S1659"#Declare "water" on a separate line.(œÄøà
-:squid:S1166"%Either log or rethrow this exception.(”ı¾
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ß¨ ü
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(æ‡Òó
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(¶Üæİ
-N"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(¤Òš
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(ş¿¥«úÿÿÿÿ
-wsquid:S00116"aRename this field "transition_sand_forest" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÌªŒ
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(¦ĞşŞ
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-?squid:S1181"%Catch Exception instead of Throwable.(¶Šáïøÿÿÿÿ
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Óò¼Ôıÿÿÿÿ8±Şığµ+
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(¦ĞşŞ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¯·–Òùÿÿÿÿ
-nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(²
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(ñİ§º
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÄöÊëüÿÿÿÿ
-~"squid:ClassVariableVisibilityCheck"RMake forest a static final constant or non-public and provide accessors if needed.(œÄøà
-"squid:ClassVariableVisibilityCheck"bMake transition_sand_forest a static final constant or non-public and provide accessors if needed.(ûÌªŒ
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(¨Š…¼ûÿÿÿÿ
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(„»ÁÃûÿÿÿÿ
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ğş´4
-2squid:S2386"Make this member "protected".(”™Ìí
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(¨Š…¼ûÿÿÿÿ
-hsquid:S1192"SDefine a constant instead of duplicating this literal "misc_flower_09.png" 9 times.(´–“Ä
-6squid:S1643"Use a StringBuilder instead.(Ê¯í¼ıÿÿÿÿ
-`squid:S2184"FCast one of the operands of this substraction operation to a "double".(ÀØšôÿÿÿÿÿ
-@squid:S1481"+Remove this unused "random" local variable.(¦¼˜ò
-Nsquid:S1659"9Declare "transition_meadow_tallgrass" on a separate line.(ûÌªŒ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(÷µïá
-‡ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Üÿ‡Ïøÿÿÿÿ
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(îÕ¸´
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(‡ÊÂûÿÿÿÿ
-Csquid:S1481")Remove this unused "xBot" local variable.(–í¼¸üÿÿÿÿ
-Csquid:S2140")Use "java.util.Random.nextInt()" instead.(°´¤Íşÿÿÿÿ
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(”ÚÖ¾
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ğş´4
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ú„üÿÿÿÿ
-lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö®Ôó
-:squid:S1166"%Either log or rethrow this exception.(ï­£Ä
-T
-squid:S106";Replace this usage of System.out or System.err by a logger.(ŞÎÿÅÿÿÿÿÿ
-}"squid:ClassVariableVisibilityCheck"QMake water a static final constant or non-public and provide accessors if needed.(œÄøà
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(³Ï¹
-„"squid:ClassVariableVisibilityCheck"QMake river a static final constant or non-public and provide accessors if needed.(œÄøà8…àùğµ+
-?squid:S1181"%Catch Exception instead of Throwable.(¶Šáïøÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¶ÊÛá
->squid:S1444")Make this "public static fps" field final(Ûì€£
-?squid:S1166"%Either log or rethrow this exception.(¥¨›ıÿÿÿÿ
-Dsquid:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
-"squid:ClassVariableVisibilityCheck"SMake ruleset a static final constant or non-public and provide accessors if needed.(ÄÚò“
-Š"squid:ClassVariableVisibilityCheck"YMake notifications a static final constant or non-public and provide accessors if needed.(µ×Öùÿÿÿÿ
-Csquid:S1444".Make this "public static keysDown" field final(”™Ìí
-fsquid:S1192"QDefine a constant instead of duplicating this literal "grass_01_top.png" 4 times.(ú¼—
-7squid:S1659""Declare "oldX" on a separate line.(Î ¾ï
-Msquid:S1854"8Remove this useless assignment to local variable "oldY".(Î ¾ï
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(î…¯Øøÿÿÿÿ
-}"squid:ClassVariableVisibilityCheck"QMake WIDTH a static final constant or non-public and provide accessors if needed.(‚Ó€
-Jsquid:S1854"5Remove this useless assignment to local variable "r".(¡Å”¦
-7squid:S2386"Make this member "protected".(È…¿Ïüÿÿÿÿ
-Ksquid:S2696"6Make the enclosing method "static" or remove this set.(ÑòŒï
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(°›Ğ‘
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(æ‡Òó
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(†‚†œüÿÿÿÿ
-N"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(¤Òš
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(îÕ¸´
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ôäâ•ÿÿÿÿÿ
-Gsquid:UselessParenthesesCheck"!Remove those useless parentheses.(í²ì
-Psquid:S2696"6Make the enclosing method "static" or remove this set.(¿ßôùÿÿÿÿ
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(™˜¥
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ğş´4
-ƒsquid:S1151"iReduce this switch case number of lines from 6 to at most 5, for example by extracting code into methods.(úâúÿÿÿÿ
-Bsquid:S1444"-Make this "public static ruleset" field final(ÄÚò“
-?squid:S1166"%Either log or rethrow this exception.(µØ¯®øÿÿÿÿ
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(„»ÁÃûÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(æ‡Òó
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ù¾°M
-Ksquid:S1444"1Make this "public static loadingBars" field final(È…¿Ïüÿÿÿÿ
-„squid:S2681"oOnly the first line of this 3-line block will be executed conditionally. The rest will execute unconditionally.(†¦Ä™
-Csquid:S2140")Use "java.util.Random.nextInt()" instead.(Øçææÿÿÿÿÿ
-N"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(ı‡»Ü
-ksquid:S00104"[This file has 882 lines, which is greater than 750 authorized. Split it into smaller files.
-`squid:S2184"FCast one of the operands of this substraction operation to a "double".(ÀØšôÿÿÿÿÿ
-Xsquid:S2583"CChange this condition so that it does not always evaluate to "true"(™¬Üİ
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(”ÚÖ¾
-Isquid:S1659"4Declare "transition_sand_forest" on a separate line.(ûÌªŒ
-|squid:S00116"fRename this field "transition_meadow_tallgrass" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÌªŒ
-<squid:S1659"'Declare "tallgrass" on a separate line.(œÄøà
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÿ¢…Éùÿÿÿÿ
-a
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(¿¹²2
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(”ÚÖ¾
-Msquid:S1444"3Make this "public static notifications" field final(µ×Öùÿÿÿÿ
-Psquid:S2696"6Make the enclosing method "static" or remove this set.(îŒÙûÿÿÿÿ
-Rsquid:S1854"8Remove this useless assignment to local variable "oldY".(‹áâøúÿÿÿÿ
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(ñİ§º
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(¦ĞşŞ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÿ¢…Éùÿÿÿÿ
-ysquid:S00116"cRename this field "transition_meadow_forest" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÌªŒ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(É‰«
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(îÕ¸´
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(¨Š…¼ûÿÿÿÿ
-"squid:ClassVariableVisibilityCheck"aMake transition_sand_water a static final constant or non-public and provide accessors if needed.(ûÌªŒ
-…squid:S1319"pThe type of the "keysDown" object should be an interface such as "Map" rather than the implementation "HashMap".(”™Ìí
->squid:S2140")Use "java.util.Random.nextInt()" instead.(òç‚
-`squid:S2184"FCast one of the operands of this substraction operation to a "double".(ÀØšôÿÿÿÿÿ
-T
-squid:S106";Replace this usage of System.out or System.err by a logger.(¤°“Şşÿÿÿÿ
-"squid:ClassVariableVisibilityCheck"dMake transition_meadow_forest a static final constant or non-public and provide accessors if needed.(ûÌªŒ
-›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.( ª¢Ùÿÿÿÿÿ
-Ksquid:S2696"6Make the enclosing method "static" or remove this set.(„ş£ü
-Hsquid:S1659"3Declare "transition_sand_water" on a separate line.(ûÌªŒ
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Œì°C
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÎÜ©Àıÿÿÿÿ
-Osquid:S1161":Add the "@Override" annotation above this method signature(“–ış
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(íÑÖ+
-ƒsquid:S1151"iReduce this switch case number of lines from 6 to at most 5, for example by extracting code into methods.(£Ş¾Ëşÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(”ìàÖşÿÿÿÿ
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³»œ½
-Csquid:S2140")Use "java.util.Random.nextInt()" instead.(Üı‚øÿÿÿÿ
-Rsquid:S1854"8Remove this useless assignment to local variable "xBot".(–í¼¸üÿÿÿÿ
-;squid:S1481"&Remove this unused "r" local variable.(¡Å”¦
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ğş´4
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(‡ÊÂûÿÿÿÿ
-Asquid:S1444",Make this "public static canvas" field final(á³ú‹
-nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(”™Ìí
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ó¯“î
-Isquid:S1659"4Declare "transition_sand_meadow" on a separate line.(ûÌªŒ
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ğş´4
-=squid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-`squid:S1854"?Remove this useless assignment to local variable "pointsarray".(‚Ì¼ûÿÿÿÿ8±Şığµ+
->squid:S1481")Remove this unused "yBot" local variable.(Éîô²
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(†˜Èé
-wsquid:S00116"aRename this field "transition_sand_meadow" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÌªŒ
-`squid:S2184"FCast one of the operands of this substraction operation to a "double".(ş¿¥«úÿÿÿÿ
-Qsquid:S1854"<Remove this useless assignment to local variable "tallpath".(»ò
-ˆ"squid:ClassVariableVisibilityCheck"WMake loadingBars a static final constant or non-public and provide accessors if needed.(È…¿Ïüÿÿÿÿ
-–squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Şº•
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(ñİ§º
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(”ìàÖşÿÿÿÿ
-7squid:S1659""Declare "sand" on a separate line.(œÄøà
-‡ squid:ForLoopCounterChangedCheck"XRefactor the code in order to not assign to this loop counter from within the loop body.(Üÿ‡Ïøÿÿÿÿ
-fsquid:S1192"QDefine a constant instead of duplicating this literal "tallgrass_06.png" 3 times.(¡ÃÏÔ
-Jsquid:S2696"6Make the enclosing method "static" or remove this set.(ÁîÑ7
-N"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(¤Òš
-2squid:S2386"Make this member "protected".(ÄÚò“
-fsquid:S3008"QRename this field "HEIGHT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡˜ÓÀ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ
-Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(«§ÕÚıÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¡ëøÊ
-squid:S1319"vThe type of the "loadingBars" object should be an interface such as "List" rather than the implementation "ArrayList".(È…¿Ïüÿÿÿÿ
->squid:S1481")Remove this unused "oldY" local variable.(Î ¾ï
-lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 67 to the 15 allowed.(ôŒÚşÿÿÿÿ
-\squid:S2184"BCast one of the operands of this division operation to a "double".(ÿËˆúÿÿÿÿ
-lsquid:S00117"VRename this local variable name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÌõç
-lsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(Âùüÿÿÿÿ
-?squid:S1166"%Either log or rethrow this exception.(¶Šáïøÿÿÿÿ
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(˜ é¹úÿÿÿÿ
-g
-squid:S134"NRefactor this code to not nest more than 3 if/for/while/switch/try statements.(¡»¢üùÿÿÿÿ
-asquid:S2184"GCast one of the operands of this multiplication operation to a "float".(”ƒ›óúÿÿÿÿ
-ƒsquid:S1151"iReduce this switch case number of lines from 6 to at most 5, for example by extracting code into methods.(‰ÆÄÎşÿÿÿÿ
-hsquid:S1192"SDefine a constant instead of duplicating this literal "misc_forestgrass_0" 3 times.(¼­êÓ
-\squid:S2184"BCast one of the operands of this addition operation to a "double".(ş¿¥«úÿÿÿÿ
-ksquid:S1192"QDefine a constant instead of duplicating this literal "tallgrass_03.png" 4 times.(¸—ÂØÿÿÿÿÿ
-’squid:S1319"xThe type of the "notifications" object should be an interface such as "List" rather than the implementation "ArrayList".(µ×Öùÿÿÿÿ
-\squid:S2184"BCast one of the operands of this division operation to a "double".(²Áşèøÿÿÿÿ
-=squid:S1604"(Make this anonymous inner class a lambda(¤¡”Ê
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(¶Üæİ
-|"squid:ClassVariableVisibilityCheck"PMake sand a static final constant or non-public and provide accessors if needed.(œÄøà
-?squid:S1166"%Either log or rethrow this exception.(¶Šáïøÿÿÿÿ
-?squid:S1166"%Either log or rethrow this exception.(¶Šáïøÿÿÿÿ
-[squid:S2147"FCombine this catch with the one at line 1102, which has the same body.(Å¡ß
-esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¨ÿ´³ûÿÿÿÿ
-“"squid:ClassVariableVisibilityCheck"gMake transition_meadow_tallgrass a static final constant or non-public and provide accessors if needed.(ûÌªŒ
-Hsquid:UselessParenthesesCheck"!Remove those useless parentheses.(¼‰ë´
-nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(úÆôí
-[squid:S2184"FCast one of the operands of this substraction operation to a "double".(ñİ§º
-Psquid:S2696"6Make the enclosing method "static" or remove this set.(ò×òşÿÿÿÿ
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(š¿ÄÖ
-osquid:S1067"ZReduce the number of conditional operators (4) used in the expression (maximum allowed 3).(øú›
-`squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(æ‡Òó
-"squid:ClassVariableVisibilityCheck"UMake tallgrass a static final constant or non-public and provide accessors if needed.(œÄøà
-_squid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(§í«
-?squid:S1181"%Catch Exception instead of Throwable.(¶Šáïøÿÿÿÿ
-vsquid:S00116"`Rename this field "transition_sand_water" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûÌªŒ
-`squid:S1301"KReplace this "switch" statement by "if" statements to increase readability.(¤Òš
-Msquid:UselessParenthesesCheck"!Remove those useless parentheses.(úèîıÿÿÿÿ
-Wsquid:S2184"BCast one of the operands of this addition operation to a "double".(¶Üæİ
-:squid:S1166"%Either log or rethrow this exception.(Å¡ß

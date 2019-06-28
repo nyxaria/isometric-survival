@@ -57,6 +57,8 @@ class Canvas extends JComponent {
     long lastpaint = System.currentTimeMillis();
     int frameCount = 0;
     int fps;
+    boolean changed = true;
+
     @Override
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
@@ -66,18 +68,21 @@ class Canvas extends JComponent {
 
 
         if (inGame && !world.paused) {
-            g2.setColor(Color.black);
-            g2.fillRect(0, 0, getToolkit().getScreenSize().width, getToolkit().getScreenSize().height);
-            long start = System.currentTimeMillis();
-            latestRenderTerrain = getRelevantRenderSheetTo(world.player);
-            g2.drawImage(latestRenderTerrain, 0, 0, null);
+                g2.setColor(Color.black);
+                g2.fillRect(0, 0, getToolkit().getScreenSize().width, getToolkit().getScreenSize().height);
+                long start = System.currentTimeMillis();
+                if(changed) {
+                    latestRenderTerrain = getRelevantRenderSheetTo(world.player);
+                    changed = false;
+                }
+                g2.drawImage(latestRenderTerrain, 0, 0, null);
 //            if(System.currentTimeMillis() - lastpaint >= 1000) {
 //                lastpaint = System.currentTimeMillis();
 //                fps = frameCount;
 //                frameCount = 0;
 //            } else {
 //                frameCount++;
-//            }
+//
 
         } else {
             g.setColor(Color.black);
@@ -99,7 +104,7 @@ class Canvas extends JComponent {
 
                 g2.setColor(bar.getTitleColor());
                 g2.setFont(bar.font);
-                g2.drawString(bar.title, bar.x - (g2.getFontMetrics().stringWidth(bar.title) / 2), bar.y + getLabelHeight(g2, bar.title, bar.font) / 2 - 2);
+                g2.drawString(bar.title, (int) (bar.x - (g2.getFontMetrics().stringWidth(bar.title) / 2.0), bar.y + getLabelHeight(g2, bar.title, bar.font) / 2 - 2));
 
             }
         }
@@ -374,11 +379,13 @@ class Canvas extends JComponent {
 
                     if (world.chunks[curyy][curxx].isReady()) {
                         Point cur = isoToScreen(curyy, curxx, 0);
-                        g2.drawImage(renderedChunks[curxx][curyy], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2)) - (int) (focus.x + 0.5)), (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2) - TILE_HEIGHT / 2 - (int) (focus.y + 0.5)), null);
-                        g2.drawImage(renderedWalls[curxx][curyy], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2)) - (int) (focus.x + 0.5)), (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2) - TILE_HEIGHT / 2 - (int) (focus.y + 0.5) - yOffWalls), null);
+                        g2.drawImage(renderedChunks[curxx][curyy], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2)) - (int) (focus.x + 0.5)),
+                                (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2) - TILE_HEIGHT / 2 - (int) (focus.y + 0.5)), null);
+                        g2.drawImage(renderedWalls[curxx][curyy], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2)) - (int) (focus.x + 0.5)),
+                                (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2) - TILE_HEIGHT / 2 - (int) (focus.y + 0.5) - yOffWalls), null);
                         renderEntities(curyy, curxx, focus);
-
-                        g2.drawImage(renderedEntities[curyy][curxx], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2)) - (int) (focus.x + 0.5)) - xOffEntitiesLeft, (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2) - TILE_HEIGHT / 2 - (int) (focus.y + 0.5) - yOffWalls), null);
+                        g2.drawImage(renderedEntities[curyy][curxx], (int) (((cur.x) * (World.CHUNK_WIDTH) + (Toolkit.getDefaultToolkit().getScreenSize().width / 2)) - (int) (focus.x + 0.5)) - xOffEntitiesLeft,
+                                (int) ((((cur.y) * World.CHUNK_HEIGHT) + Toolkit.getDefaultToolkit().getScreenSize().height / 2) - TILE_HEIGHT / 2 - (int) (focus.y + 0.5) - yOffWalls), null);
                     }
                 }
             }

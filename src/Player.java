@@ -81,6 +81,7 @@ public class Player extends Entity {
             image = Canvas.tiler.get(set + "_" + lastReleasedDir + "_0");
             return;
         }
+        world.canvas.changed = true;
         lastReleasedDir = dir;
         fps = (1 / movementSpeed + 0.01) / 71;
         double animationsToDo = 8;
