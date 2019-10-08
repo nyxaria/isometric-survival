@@ -1,4 +1,3 @@
 Manifest-Version: 1.0
-Class-Path: /home/hartt/src/isometric-survival/bin/
 Main-Class: Main
 

@@ -1,9 +1,11 @@
+import javax.imageio.ImageIO;
 import java.awt.AlphaComposite;
 import java.awt.Graphics2D;
 import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.awt.image.RescaleOp;
+import java.io.IOException;
 import java.io.Serializable;
 
 public class Wall implements Serializable {
@@ -31,7 +33,7 @@ public class Wall implements Serializable {
 			return new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
 
 		if (!Canvas.tiler.exists(asset)) {
-			Canvas.tiler.add(asset, Main.loadImage(asset));
+			Canvas.tiler.add(asset, loadImage(asset));
 		}
 		if (!Canvas.tiler.exists(asset + "_" + opacity)) {
 
@@ -119,4 +121,14 @@ public class Wall implements Serializable {
 		return z + "\n" + orientation + "\n" + asset;
 	}
 
+	public BufferedImage loadImage(String asset) {
+		BufferedImage img = null;
+		System.out.println(Main.ASSETS + "/" + asset);
+		try {
+			img = ImageIO.read(getClass().getResource(Main.ASSETS + "/" + asset));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return img;
+	}
 }

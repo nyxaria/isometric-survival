@@ -26,7 +26,7 @@ public class Main {
 
     static ArrayList<String> rulelist = new ArrayList<String>();
 
-    private static final String ROOT = "/home/hartt/src/isometric-survival/isometry";
+    private static final String ROOT = "isometry";
 //    public static final String ROOT = "isometry";
     public static final String RULES = ROOT + "/rules";
     public static final String ASSETS = ROOT + "/assets";
@@ -1172,17 +1172,6 @@ public class Main {
 
         }
         return data;
-    }
-
-    public static BufferedImage loadImage(String asset) {
-        BufferedImage img = null;
-        System.out.println(ASSETS + "/" + asset);
-        try {
-            img = ImageIO.read(new File(ASSETS + "/" + asset));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return img;
     }
 
     private static void notify(int flag, int i, String message) {

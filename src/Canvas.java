@@ -57,6 +57,7 @@ class Canvas extends JComponent {
     long lastpaint = System.currentTimeMillis();
     int frameCount = 0;
     int fps;
+    long startFpsCounter;
     boolean changed = true;
 
     @Override
@@ -74,14 +75,18 @@ class Canvas extends JComponent {
                 if(changed) {
                     latestRenderTerrain = getRelevantRenderSheetTo(world.player);
                     changed = false;
+                    System.out.println("Tick " + (System.currentTimeMillis() - start));
                 }
                 g2.drawImage(latestRenderTerrain, 0, 0, null);
-//            if(System.currentTimeMillis() - lastpaint >= 1000) {
-//                lastpaint = System.currentTimeMillis();
-//                fps = frameCount;
-//                frameCount = 0;
-//            } else {
-//                frameCount++;
+
+                if(System.currentTimeMillis() - startFpsCounter >= 1000) {
+                    lastpaint = System.currentTimeMillis();
+                    fps = frameCount;
+                    frameCount = 0;
+                    startFpsCounter = System.currentTimeMillis();
+                } else {
+                    frameCount++;
+                }
 //
 
         } else {
@@ -104,7 +109,7 @@ class Canvas extends JComponent {
 
                 g2.setColor(bar.getTitleColor());
                 g2.setFont(bar.font);
-                g2.drawString(bar.title, (int) (bar.x - (g2.getFontMetrics().stringWidth(bar.title) / 2.0), bar.y + getLabelHeight(g2, bar.title, bar.font) / 2 - 2));
+                g2.drawString(bar.title, (int) (bar.x - (g2.getFontMetrics().stringWidth(bar.title) / 2.0)), bar.y + getLabelHeight(g2, bar.title, bar.font) / 2 - 2);
 
             }
         }
@@ -365,7 +370,7 @@ class Canvas extends JComponent {
         BufferedImage entities = new BufferedImage(tiles.getWidth(), tiles.getHeight(), tiles.getType());
         Graphics2D g2e = entities.createGraphics();
         DPoint focus = this.focus; //!!!!!!!
-
+        System.out.println("Start " + System.currentTimeMillis());
         for (int cx = -visibility; cx <= visibility; cx++) {
             for (int cy = -visibility; cy <= visibility; cy++) {
                 if (yy + cy >= 0 && xx + cx >= 0 && yy + cy < world.height / World.CHUNK_HEIGHT && xx + cx < world.width / World.CHUNK_WIDTH) {
@@ -373,8 +378,10 @@ class Canvas extends JComponent {
                     int curxx = yy + cy;
 
                     if (!world.chunks[curxx][curyy].isRendered()) {
+                        System.out.println("Start Chunk" + System.currentTimeMillis());
                         renderChunk(curyy, curxx);
                         renderWalls(curyy, curxx);
+                        System.out.println("End Chunk " + System.currentTimeMillis());
                     }
 
                     if (world.chunks[curyy][curxx].isReady()) {
@@ -390,8 +397,8 @@ class Canvas extends JComponent {
                 }
             }
         }
+        System.out.println("End " + System.currentTimeMillis());
 
-        
         g2.dispose();
         latestRenderTerrain = tiles;
 

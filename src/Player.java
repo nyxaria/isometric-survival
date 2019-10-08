@@ -1,10 +1,13 @@
+import javax.imageio.ImageIO;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public class Player extends Entity {
     Camera camera = new Camera();
     public double movementSpeed = 0.020;
     World world;
-    String set = "archer";
+    String set = "regular";
 
     public Player(World world) {
         this.world = world;
@@ -18,7 +21,7 @@ public class Player extends Entity {
         for(String set : sets) {
             for(int i = 0; i < 8; i++) {
                 for(int r = 0; r < 32; r++) {
-                    Canvas.tiler.add(set + "_" + i + "_" + r, Main.loadImage(set + "_" + i + "_" + r + ".png"));
+                    Canvas.tiler.add(set + "_" + i + "_" + r, loadImage(set + "_" + i + "_" + r + ".png"));
                 }
             }
         }
@@ -41,12 +44,13 @@ public class Player extends Entity {
         }
 
         if(Main.isKeyDown(KeyEvent.VK_SHIFT)) {
-            movementSpeed = .023;
+            movementSpeed = .024;
         } else {
             movementSpeed = .018;
         }
 
         updateImage();
+
         // System.out.println(getY());
 
     }
@@ -59,33 +63,39 @@ public class Player extends Entity {
     private int lastReleasedDir = 6;
 
     public void updateImage() {
-        if(Main.isKeyDown(KeyEvent.VK_W) && !Main.isKeyDown(KeyEvent.VK_S)) {
+        boolean keyUp = Main.isKeyDown(KeyEvent.VK_W) || Main.isKeyDown(KeyEvent.VK_UP);
+        boolean keyDown = Main.isKeyDown(KeyEvent.VK_S) || Main.isKeyDown(KeyEvent.VK_DOWN);
+        boolean keyLeft = Main.isKeyDown(KeyEvent.VK_A) || Main.isKeyDown(KeyEvent.VK_LEFT);
+        boolean keyRight = Main.isKeyDown(KeyEvent.VK_D) || Main.isKeyDown(KeyEvent.VK_RIGHT);
+
+        if(keyUp && !keyDown) {
             dir = 2;
-            if(Main.isKeyDown(KeyEvent.VK_A) && !Main.isKeyDown(KeyEvent.VK_D)) {
+            if(keyLeft && !keyRight) {
                 dir = 1;
-            } else if(Main.isKeyDown(KeyEvent.VK_D) && !Main.isKeyDown(KeyEvent.VK_A)) {
+            } else if(keyRight && !keyLeft) {
                 dir = 3;
             }
-        } else if(Main.isKeyDown(KeyEvent.VK_S) && !Main.isKeyDown(KeyEvent.VK_W)) {
+        } else if(keyDown && !keyUp) {
             dir = 6;
-            if(Main.isKeyDown(KeyEvent.VK_A) && !Main.isKeyDown(KeyEvent.VK_D)) {
+            if(keyLeft && !keyRight) {
                 dir = 7;
-            } else if(Main.isKeyDown(KeyEvent.VK_D) && !Main.isKeyDown(KeyEvent.VK_A)) {
+            } else if(keyRight && !keyLeft) {
                 dir = 5;
             }
-        } else if(Main.isKeyDown(KeyEvent.VK_A) && !Main.isKeyDown(KeyEvent.VK_D)) {
+        } else if(keyLeft && !keyRight) {
             dir = 0;
-        } else if(Main.isKeyDown(KeyEvent.VK_D) && !Main.isKeyDown(KeyEvent.VK_A)) {
+        } else if(keyRight && !keyLeft) {
             dir = 4;
         } else { //no key down
             image = Canvas.tiler.get(set + "_" + lastReleasedDir + "_0");
+            world.canvas.changed = true;
             return;
         }
-        world.canvas.changed = true;
         lastReleasedDir = dir;
         fps = (1 / movementSpeed + 0.01) / 71;
         double animationsToDo = 8;
         image = Canvas.tiler.get(set + "_" + dir + "_" + (4 + (int) (((System.currentTimeMillis() - start) / ((fps * 1000) / animationsToDo)) % animationsToDo)));
+        world.canvas.changed = true;
 
     }
 
@@ -152,7 +162,12 @@ public class Player extends Entity {
     }
 
     public void move() {
-        if(isKeyDown(KeyEvent.VK_W)) {
+        boolean keyUp = Main.isKeyDown(KeyEvent.VK_W) || Main.isKeyDown(KeyEvent.VK_UP);
+        boolean keyDown = Main.isKeyDown(KeyEvent.VK_S) || Main.isKeyDown(KeyEvent.VK_DOWN);
+        boolean keyLeft = Main.isKeyDown(KeyEvent.VK_A) || Main.isKeyDown(KeyEvent.VK_LEFT);
+        boolean keyRight = Main.isKeyDown(KeyEvent.VK_D) || Main.isKeyDown(KeyEvent.VK_RIGHT);
+
+        if(keyUp) {
             double newX = getX() - movementSpeed;
             double newY = getY() - movementSpeed;
             if(inBounds(newX, newY)) {
@@ -160,7 +175,7 @@ public class Player extends Entity {
                 setX(newX);
             }
         }
-        if(isKeyDown(KeyEvent.VK_S)) {
+        if(keyDown) {
             double newX = getX() + movementSpeed;
             double newY = getY() + movementSpeed;
             if(inBounds(newX, newY)) {
@@ -168,7 +183,7 @@ public class Player extends Entity {
                 setX(newX);
             }
         }
-        if(isKeyDown(KeyEvent.VK_A)) {
+        if(keyLeft) {
             double newX = getX() - movementSpeed;
             double newY = getY() + movementSpeed;
             if(inBounds(newX, newY)) {
@@ -176,7 +191,7 @@ public class Player extends Entity {
                 setX(newX);
             }
         }
-        if(isKeyDown(KeyEvent.VK_D)) {
+        if(keyRight) {
             double newX = getX() + movementSpeed;
             double newY = getY() - movementSpeed;
             if(inBounds(newX, newY)) {
@@ -210,6 +225,17 @@ public class Player extends Entity {
                 // lastReleasedDir = "east";
                 break;
         }
+    }
+
+    public BufferedImage loadImage(String asset) {
+        BufferedImage img = null;
+        System.out.println(Main.ASSETS + "/" + asset);
+        try {
+            img = ImageIO.read(getClass().getResource(Main.ASSETS + "/" + asset));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return img;
     }
 
 }

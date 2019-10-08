@@ -1,3 +1,4 @@
+import javax.imageio.ImageIO;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
@@ -5,6 +6,7 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.awt.image.RescaleOp;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -67,11 +69,11 @@ public class Tile implements Serializable {
 	private void renderImages() {
 		for (String asset : assets) {
 			if (asset.endsWith("top.png") && !Canvas.tiler.exists(asset)) {
-				Canvas.tiler.add(asset, Main.loadImage(asset));
+				Canvas.tiler.add(asset, loadImage(asset));
 				// System.out.println(Canvas.tiler.get(asset));
 
 			} else if (asset.endsWith("side.png") && !Canvas.tiler.exists(asset)) {
-				Canvas.tiler.add(asset, Main.loadImage(asset));
+				Canvas.tiler.add(asset, loadImage(asset));
 				getSideTile(Tile.ORIENTATION_BOTTOM_RIGHT, Tile.SHADE_RIGHT);
 				getSideTile(Tile.ORIENTATION_BOTTOM_LEFT, Tile.SHADE_LEFT);
 				getSideTile(Tile.ORIENTATION_TOP_RIGHT, Tile.SHADE_RIGHT);
@@ -81,7 +83,7 @@ public class Tile implements Serializable {
 				// JOptionPane.PLAIN_MESSAGE, null);
 
 			} else if (!Canvas.tiler.exists(asset)) {
-				Canvas.tiler.add(asset, Main.loadImage(asset));
+				Canvas.tiler.add(asset, loadImage(asset));
 			}
 
 		}
@@ -92,13 +94,13 @@ public class Tile implements Serializable {
 			return new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
 		if(highlighted) {
 			if (!Canvas.tiler.exists("grass_0_top")) {
-				Canvas.tiler.add("grass_0_top", Main.loadImage("grass_0_top.png"));
+				Canvas.tiler.add("grass_0_top", loadImage("grass_0_top.png"));
 			}
 			return Canvas.tiler.get("grass_0_top");
 		}
 
 		if (!Canvas.tiler.exists(assets.get(0))) {
-			Canvas.tiler.add(assets.get(0), Main.loadImage(assets.get(0)));
+			Canvas.tiler.add(assets.get(0), loadImage(assets.get(0)));
 		}
 		if (!Canvas.tiler.exists(assets.get(0) + "_" + z)) {
 			BufferedImage changed = Canvas.tiler.get(assets.get(0));
@@ -119,7 +121,7 @@ public class Tile implements Serializable {
 
 	public BufferedImage getSideTile(int orientation, float darken) {
  		if (!Canvas.tiler.exists(assets.get(1))) {
-			Canvas.tiler.add(assets.get(1), Main.loadImage(assets.get(1)));
+			Canvas.tiler.add(assets.get(1), loadImage(assets.get(1)));
 		}
 		if (!Canvas.tiler.exists(assets.get(1) + "_" + orientation + "_" + z + "_" + darken)) {
 			BufferedImage changed = Canvas.tiler.get(assets.get(1));
@@ -299,5 +301,16 @@ public class Tile implements Serializable {
 		renderImages();
 		misc.image = Canvas.tiler.get(misc.asset);
 		miscs.add(misc);
+	}
+
+	public BufferedImage loadImage(String asset) {
+		BufferedImage img = null;
+		System.out.println(Main.ASSETS + "/" + asset);
+		try {
+			img = ImageIO.read(getClass().getResource(Main.ASSETS + "/" + asset));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return img;
 	}
 }
